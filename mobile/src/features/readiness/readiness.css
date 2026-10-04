@@ -1,0 +1,27 @@
+/* Reserve bars of plan-reserve-v2: a quiet strip at the bottom of a calendar day, never a score card. */
+.reserve-day { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; width:100%; min-width:0; padding:3px; --reserve-rail:#D6DECA; --reserve-high:#748E59; --reserve-medium:#B99A3C; --reserve-low:#B0664A; --reserve-gap:#EEF2E5; }
+.reserve-track { display:block; width:100%; min-width:18px; max-width:44px; height:5px; border-radius:10px; background:var(--reserve-rail); overflow:hidden; }
+.reserve-track>span { display:block; height:100%; border-radius:10px; background:var(--reserve-high); }
+.reserve-medium>span { background:var(--reserve-medium); }
+.reserve-low>span { background:var(--reserve-low); }
+/* Lower confidence: the same length and colour, hatched. */
+.reserve-lower>span { background-image:repeating-linear-gradient(135deg,transparent 0 3px,var(--reserve-gap) 3px 5px); }
+/* In a calendar tile only the bar is drawn; the day details add the words. */
+.reserve-caption { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+.planning-readiness-slot .reserve-day, .reserve-compare .reserve-day { align-items:flex-start; padding-inline:0; }
+.planning-readiness-slot .reserve-track, .reserve-compare .reserve-track { max-width:120px; height:6px; }
+.planning-readiness-slot .reserve-caption, .reserve-compare .reserve-caption { position:static; width:auto; height:auto; margin:0; overflow:visible; clip:auto; white-space:normal; overflow-wrap:anywhere; font-size:.75rem; line-height:1.4; color:var(--muted); }
+.reserve-compare .form-row>div { display:grid; gap:4px; min-width:0; font-size:.8rem; }
+
+/* The explanation inside the calendar legend. */
+.reserve-legend { display:grid; gap:10px; padding-top:14px; border-top:1px solid var(--line); min-width:0; }
+.reserve-legend h3 { margin:0; font-size:1rem; }
+.reserve-legend p { margin:0; }
+.reserve-samples { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.reserve-samples li { display:grid; grid-template-columns:64px minmax(0,1fr); align-items:center; gap:10px; font-size:.85rem; overflow-wrap:anywhere; --reserve-rail:#D6DECA; --reserve-high:#748E59; --reserve-medium:#B99A3C; --reserve-low:#B0664A; --reserve-gap:#EEF2E5; }
+.reserve-samples .reserve-track { max-width:64px; height:6px; }
+.reserve-legend details { border-top:1px solid var(--line); padding-top:6px; }
+.reserve-legend summary { min-height:44px; display:flex; align-items:center; cursor:pointer; font-weight:650; font-size:.9rem; }
+.reserve-legend details p { font-size:.85rem; color:var(--muted); margin-bottom:8px; }
+:root[data-theme="dark"] :is(.reserve-day,.reserve-samples li) { --reserve-rail:#3A4B39; --reserve-high:#8FB277; --reserve-medium:#D2B45A; --reserve-low:#D98A6C; --reserve-gap:#1B2A20; }
+@media (forced-colors: active) { .reserve-track { border:1px solid CanvasText; } .reserve-track>span { background:CanvasText; forced-color-adjust:none; } }

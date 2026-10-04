@@ -1,0 +1,110 @@
+{
+  "format": "trainleaf-released-database-fixture",
+  "version": 1,
+  "generatedAt": "2026-10-04T14:16:51.265Z",
+  "app": {
+    "versionName": "0.2.0",
+    "versionCode": 2,
+    "applicationId": "com.frisbeeprep.app"
+  },
+  "sourceSnapshot": "outputs/trainleaf-0.2.0-audit",
+  "sourceCapturedAt": "2026-10-03T19:14:12.259Z",
+  "sourceManifestSha256": "3ff2f24b894b349bbab8239f2c810bef0b9da1898d10b07bcaf671e3c68d178e",
+  "sourceApkSha256": "66c184a27ee9b568d8b2ed660c605251ae4679235340d63127e3521181e9b19b",
+  "sourceFiles": [
+    {
+      "path": "lib/catalog-v4.ts",
+      "bytes": 55755,
+      "sha256": "e0cd4e7d869680306ce0292e177412c571b0856cac2eeed9f771f467a6449983"
+    },
+    {
+      "path": "lib/catalog.ts",
+      "bytes": 144918,
+      "sha256": "1a115c9a1dce16142885e2a120c636dcbc427e0c8f5d209f3b4b8761f36df654"
+    },
+    {
+      "path": "lib/domain.ts",
+      "bytes": 14520,
+      "sha256": "b2e4550806eb2b2ff5f5b24c97fbc0e1266111f47209e076e143ba2b9b6572e3"
+    },
+    {
+      "path": "lib/exercise-types.ts",
+      "bytes": 1881,
+      "sha256": "a6da9ef090e7d2d59f3a641c0aa5dbb026d1d4dc7be013b090992707e7b2db9c"
+    },
+    {
+      "path": "lib/legacy-exercise-types.ts",
+      "bytes": 16921,
+      "sha256": "ef8a5db8ead5726a72b89612a7d496e5d2b0872493341b779f8c863cb6024f71"
+    },
+    {
+      "path": "lib/research-content.ts",
+      "bytes": 44447,
+      "sha256": "9ef681a1ef06c7733c57050293998c95129f9a93533c89b87aad1d8fc18a296b"
+    },
+    {
+      "path": "lib/seed.ts",
+      "bytes": 7498,
+      "sha256": "382018ba2825ba46a9c98eed65ec9ac0b72eb898f6a51e792bdb5f88a21b69d5"
+    },
+    {
+      "path": "lib/wellness.ts",
+      "bytes": 4655,
+      "sha256": "beccf9030c990c836d11ad72a150e7e5d9803fdccc0360bb0cd65f54c15397b6"
+    },
+    {
+      "path": "mobile/src/data/analytics.ts",
+      "bytes": 8990,
+      "sha256": "74bcc6962ef92b321a55e62a484b29163e321dd3c220fed407f51e77f30994ee"
+    },
+    {
+      "path": "mobile/src/data/catalog.ts",
+      "bytes": 2033,
+      "sha256": "f00486e8b06058d28177a6c755f52fd17bac29f7f54bb0ed0947d696f40d8480"
+    },
+    {
+      "path": "mobile/src/data/database.ts",
+      "bytes": 6006,
+      "sha256": "cedbe8d260dc97f1a114f2d9fa44b19d72702f9f3b289aee5d23347e8bf00a43"
+    },
+    {
+      "path": "mobile/src/data/domain.ts",
+      "bytes": 17805,
+      "sha256": "7e5cd82b9c44ea9eca5d28ab9a00926250a4ee4c5e9ba95feb3726e211e920a7"
+    },
+    {
+      "path": "mobile/src/data/load.ts",
+      "bytes": 4525,
+      "sha256": "894c8b0435d2ca828c4055f684477ba3f5f5db05f38b0ac9bddd3313cc0346ca"
+    },
+    {
+      "path": "mobile/src/data/repository.ts",
+      "bytes": 26406,
+      "sha256": "4d877e239b8b077ba2296d03ec54e6808ebd44b6da0d73d6a23699f278e42044"
+    },
+    {
+      "path": "mobile/src/data/supersets.ts",
+      "bytes": 3057,
+      "sha256": "9bdf9f1640d7c671d6d453079d86a3d06d02f1fe677869e0c7e2244cfcdf3625"
+    }
+  ],
+  "database": {
+    "file": "released-v5.sqlite",
+    "schemaVersion": 5,
+    "sha256": "a2cf653a9f3a7bb2619590183b21c33e52c3515af0ded0dd64fa5a2c82fbf65a"
+  },
+  "backup": {
+    "file": "backup-v3.json",
+    "version": 3,
+    "sha256": "30b5edf78fb564d5c1874294e1db08d524937e72af3f2e361188c4a2e4b90053"
+  },
+  "generation": "Real SQLite created by SHA256-verified frozen 0.2.0 repository and migrations, populated through its public APIs. No column dropping or schema reconstruction. Synthetic test records only; no user data. Device APK installation was not exercised.",
+  "fixtureClock": "2026-12-31T12:00:00.000Z",
+  "releasedMigrationSha256": {
+    "One": "ed82e99d17748c113c43b207acc2975f738b9f52544f39c104a96c0d74b7282e",
+    "Two": "d5461635640ea3399e7775fca8b61d09d2736ff30b4a016cad421508de547550",
+    "Three": "53c52703bc90e09101c5439bea25dd1e568f760f20f1d6dbb5ddf737262468ab",
+    "Four": "78a2a55933e8ee56de3f2004f0084fbef3b5bd853c63cc479093330b6aba32c5",
+    "Five": "a8ccda52cb1174a5efa9c8cc6c771180d19624053c01343572bc27da401fdfb4"
+  }
+}

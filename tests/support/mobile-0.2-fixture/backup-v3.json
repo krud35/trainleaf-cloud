@@ -1,0 +1,383 @@
+{
+  "profile": {
+    "displayName": "Alicja",
+    "roles": [
+      "athlete"
+    ],
+    "sportIds": [
+      "ultimate",
+      "running"
+    ],
+    "visibleShortcuts": [
+      "history",
+      "library",
+      "templates",
+      "wellness",
+      "goals",
+      "periods",
+      "backup"
+    ],
+    "modules": [
+      "journal"
+    ],
+    "id": "local-profile",
+    "revision": 1,
+    "createdAt": "2026-12-31T12:00:00.000Z",
+    "updatedAt": "2026-12-31T12:00:00.000Z",
+    "syncState": "local-only"
+  },
+  "workouts": [
+    {
+      "profileId": "local-profile",
+      "sportId": "ultimate",
+      "trainingType": null,
+      "supersets": [],
+      "postWorkout": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null,
+        "satisfaction": null,
+        "notes": ""
+      },
+      "loadCalculation": null,
+      "date": "2026-10-03",
+      "title": "Trening podań",
+      "durationMinutes": 65,
+      "rpe": 0,
+      "notes": "Bez internetu. Zażółć gęślą jaźń.",
+      "status": "completed",
+      "wasPlanned": true,
+      "time": null,
+      "plannedMinutes": 60,
+      "sections": {
+        "warmup": [],
+        "main": [
+          {
+            "id": "4d2a4503-d471-468b-9e50-a205f0e42569",
+            "exercise": {
+              "id": "squat",
+              "name": "Przysiad goblet",
+              "category": "strength",
+              "metric": "kg",
+              "shares": [
+                {
+                  "muscle": "quads",
+                  "weight": 0.45
+                },
+                {
+                  "muscle": "glutes",
+                  "weight": 0.35
+                },
+                {
+                  "muscle": "abs",
+                  "weight": 0.2
+                }
+              ],
+              "video": "",
+              "notes": "Podawaj łączną liczbę powtórzeń obu stron. Ciężar oznacza sumę obciążenia zewnętrznego.",
+              "nameEn": "Goblet squat",
+              "notesEn": "Enter total repetitions for both sides. Weight means the total external load.",
+              "cues": "Trzymaj ciężar blisko klatki, usiądź między biodrami i wstań przez nacisk całej stopy.",
+              "cuesEn": "Hold the weight close to the chest, descend between the hips, and stand through the whole foot.",
+              "variants": "Pauza uczy pozycji dolnej; ciężar z przodu pomaga ćwiczyć równowagę i kontrolę przysiadu.",
+              "variantsEn": "A pause trains the bottom position; front loading helps practice balance and squat control.",
+              "sourceUrls": [
+                "https://www.acefitness.org/resources/everyone/exercise-library/362/goblet-squat/"
+              ],
+              "types": [
+                "strength"
+              ]
+            },
+            "planned": {
+              "sets": 3,
+              "quantity": 8,
+              "kg": 20,
+              "prescription": "Kontrola",
+              "tempo": "3010",
+              "rest": "90 s",
+              "effort": "RIR 2",
+              "rir": null
+            },
+            "supersetId": null,
+            "actual": {
+              "sets": 2,
+              "quantity": 8,
+              "kg": 18,
+              "rir": null
+            },
+            "athleteNotes": "Zrobione"
+          }
+        ],
+        "cooldown": []
+      },
+      "planNotes": "Założenia",
+      "periodId": "18bdbd0f-53d1-484d-8448-8d43205116b9",
+      "id": "808df3cb-1952-4343-b7e0-6bd5d7eb15c9",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "ultimate",
+      "trainingType": "strength",
+      "supersets": [],
+      "postWorkout": {
+        "aerobicFatigue": 5,
+        "muscularFatigue": 5,
+        "satisfaction": null,
+        "notes": ""
+      },
+      "loadCalculation": {
+        "version": "trainleaf-v1",
+        "inputs": {
+          "trainingType": "strength",
+          "durationMinutes": 65,
+          "aerobicFatigue": 5,
+          "muscularFatigue": 5
+        },
+        "parameters": {
+          "weights": {
+            "strength": 1.3,
+            "running": 1.05,
+            "endurance": 0.8,
+            "technical": 0.6,
+            "team": 1,
+            "mental": 0
+          },
+          "typeWeight": 1.3,
+          "fatigueMapping": {
+            "base": 0.5,
+            "perPoint": 0.1
+          }
+        },
+        "value": 84.5
+      },
+      "date": "2026-10-03",
+      "title": "Trening podań",
+      "durationMinutes": 65,
+      "rpe": 0,
+      "notes": "Bez internetu. Zażółć gęślą jaźń.",
+      "status": "completed",
+      "wasPlanned": false,
+      "time": null,
+      "plannedMinutes": null,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "1871f708-653a-49da-ade5-33cbb706328b",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    }
+  ],
+  "customExercises": [
+    {
+      "name": "Własny ruch",
+      "category": "strength",
+      "metric": "kg",
+      "shares": [
+        {
+          "muscle": "quads",
+          "weight": 1
+        }
+      ],
+      "video": "",
+      "notes": "Wskazówka",
+      "profileId": "local-profile",
+      "archivedAt": null,
+      "id": "ab906911-6be6-453e-80b9-0b8a22049527",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "exerciseNotes": [
+    {
+      "profileId": "local-profile",
+      "exerciseId": "squat",
+      "notes": "Lokalna wskazówka",
+      "id": "57c0ab65-bde2-4272-a7fd-ea49df62b55e",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    },
+    {
+      "profileId": "local-profile",
+      "exerciseId": "ab906911-6be6-453e-80b9-0b8a22049527",
+      "notes": "Moja notatka",
+      "id": "a92b18e5-3f51-48bb-a6c1-2440167b1b1f",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "templates": [
+    {
+      "profileId": "local-profile",
+      "name": "Pełna sesja",
+      "sportId": "ultimate",
+      "trainingType": null,
+      "supersets": [],
+      "section": "whole",
+      "sections": {
+        "warmup": [],
+        "main": [
+          {
+            "id": "fbb4be09-fb00-446f-a6d5-81919f57e856",
+            "exercise": {
+              "id": "squat",
+              "name": "Przysiad goblet",
+              "category": "strength",
+              "metric": "kg",
+              "shares": [
+                {
+                  "muscle": "quads",
+                  "weight": 0.45
+                },
+                {
+                  "muscle": "glutes",
+                  "weight": 0.35
+                },
+                {
+                  "muscle": "abs",
+                  "weight": 0.2
+                }
+              ],
+              "video": "",
+              "notes": "Podawaj łączną liczbę powtórzeń obu stron. Ciężar oznacza sumę obciążenia zewnętrznego.",
+              "nameEn": "Goblet squat",
+              "notesEn": "Enter total repetitions for both sides. Weight means the total external load.",
+              "cues": "Trzymaj ciężar blisko klatki, usiądź między biodrami i wstań przez nacisk całej stopy.",
+              "cuesEn": "Hold the weight close to the chest, descend between the hips, and stand through the whole foot.",
+              "variants": "Pauza uczy pozycji dolnej; ciężar z przodu pomaga ćwiczyć równowagę i kontrolę przysiadu.",
+              "variantsEn": "A pause trains the bottom position; front loading helps practice balance and squat control.",
+              "sourceUrls": [
+                "https://www.acefitness.org/resources/everyone/exercise-library/362/goblet-squat/"
+              ],
+              "types": [
+                "strength"
+              ]
+            },
+            "planned": {
+              "sets": 3,
+              "quantity": 8,
+              "kg": 20,
+              "prescription": "Kontrola",
+              "tempo": "3010",
+              "rest": "90 s",
+              "effort": "RIR 2",
+              "rir": null
+            },
+            "supersetId": null,
+            "actual": {
+              "sets": 2,
+              "quantity": 8,
+              "kg": 18,
+              "rir": null
+            },
+            "athleteNotes": "Zrobione"
+          }
+        ],
+        "cooldown": []
+      },
+      "notes": "Plan szablonu",
+      "id": "c351644c-8502-4309-8c51-fdef2427fb38",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "periods": [
+    {
+      "profileId": "local-profile",
+      "name": "Sezon",
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "level": "macro",
+      "parentId": null,
+      "description": "Opis",
+      "goal": "Cel",
+      "preset": "base",
+      "id": "18bdbd0f-53d1-484d-8448-8d43205116b9",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "wellness": [
+    {
+      "profileId": "local-profile",
+      "date": "2026-10-03",
+      "slot": "morning",
+      "answers": {
+        "sleepHours": 7.25,
+        "sleepQuality": 4,
+        "fatigue": 0
+      },
+      "notes": "Wyspana",
+      "id": "799f535b-1941-4b0f-831c-08f864ba1537",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "goals": [
+    {
+      "profileId": "local-profile",
+      "name": "Regularnie",
+      "metric": "count",
+      "cadence": "weekly",
+      "start": null,
+      "end": null,
+      "sportId": "ultimate",
+      "target": 3,
+      "id": "69aec1a3-bb92-4e89-a9a8-e0d8c5b15483",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "drafts": [
+    {
+      "profileId": "local-profile",
+      "kind": "workout",
+      "entityId": "808df3cb-1952-4343-b7e0-6bd5d7eb15c9",
+      "baseRevision": 1,
+      "epoch": 0,
+      "raw": {
+        "title": "Jeszcze nie zapisano",
+        "duration": "1,5",
+        "sections": {
+          "main": [
+            {
+              "quantity": ""
+            }
+          ]
+        }
+      },
+      "id": "52253dad-1853-4a11-ac34-9ccf5241d170",
+      "revision": 1,
+      "createdAt": "2026-12-31T12:00:00.000Z",
+      "updatedAt": "2026-12-31T12:00:00.000Z",
+      "syncState": "local-only"
+    }
+  ],
+  "format": "training-companion-backup",
+  "version": 3,
+  "exportedAt": "2026-12-31T12:00:00.000Z"
+}

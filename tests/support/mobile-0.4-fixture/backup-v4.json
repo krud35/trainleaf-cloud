@@ -1,0 +1,562 @@
+{
+  "profile": {
+    "displayName": "Zażółć 0.4.0",
+    "roles": [
+      "athlete"
+    ],
+    "sportIds": [
+      "ultimate",
+      "strength",
+      "running"
+    ],
+    "visibleShortcuts": [
+      "history",
+      "library",
+      "templates",
+      "wellness",
+      "goals",
+      "periods",
+      "backup"
+    ],
+    "modules": [
+      "journal"
+    ],
+    "id": "local-profile",
+    "revision": 1,
+    "createdAt": "2026-10-04T22:24:47.748Z",
+    "updatedAt": "2026-10-04T22:24:47.748Z",
+    "syncState": "local-only"
+  },
+  "workouts": [
+    {
+      "profileId": "local-profile",
+      "sportId": "running",
+      "trainingType": "running",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null
+      },
+      "plannedLoadCalculation": null,
+      "postWorkout": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null,
+        "satisfaction": null,
+        "notes": ""
+      },
+      "loadCalculation": null,
+      "date": "2026-10-08",
+      "title": "Plan bez ocen",
+      "durationMinutes": null,
+      "rpe": null,
+      "notes": "",
+      "status": "planned",
+      "wasPlanned": true,
+      "time": null,
+      "plannedMinutes": 35,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "b7cfdde9-5cbd-4e6b-b431-a760e32e8621",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.775Z",
+      "updatedAt": "2026-10-04T22:24:47.775Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "strength",
+      "trainingType": "strength",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": 4,
+        "muscularFatigue": 6
+      },
+      "plannedLoadCalculation": {
+        "version": "trainleaf-v1",
+        "inputs": {
+          "trainingType": "strength",
+          "durationMinutes": 50,
+          "aerobicFatigue": 4,
+          "muscularFatigue": 6
+        },
+        "parameters": {
+          "weights": {
+            "strength": 1.3,
+            "running": 1.05,
+            "endurance": 0.8,
+            "technical": 0.6,
+            "team": 1,
+            "mental": 0
+          },
+          "typeWeight": 1.3,
+          "fatigueMapping": {
+            "base": 0.5,
+            "perPoint": 0.1
+          }
+        },
+        "value": 64.35000000000001
+      },
+      "postWorkout": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null,
+        "satisfaction": null,
+        "notes": ""
+      },
+      "loadCalculation": null,
+      "date": "2026-10-06",
+      "title": "Plan z ocenami",
+      "durationMinutes": null,
+      "rpe": null,
+      "notes": "",
+      "status": "planned",
+      "wasPlanned": true,
+      "time": null,
+      "plannedMinutes": 50,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "d7377288-d708-48cc-a3ba-66d1c3119709",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.768Z",
+      "updatedAt": "2026-10-04T22:24:47.768Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "running",
+      "trainingType": "running",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null
+      },
+      "plannedLoadCalculation": null,
+      "postWorkout": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null,
+        "satisfaction": null,
+        "notes": ""
+      },
+      "loadCalculation": null,
+      "date": "2026-10-01",
+      "title": "Bieg bez ankiety",
+      "durationMinutes": 40,
+      "rpe": null,
+      "notes": "",
+      "status": "completed",
+      "wasPlanned": false,
+      "time": null,
+      "plannedMinutes": null,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "1296ede2-8b95-4fe9-9e39-27b4fed2b224",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.762Z",
+      "updatedAt": "2026-10-04T22:24:47.762Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "ultimate",
+      "trainingType": "team",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null
+      },
+      "plannedLoadCalculation": null,
+      "postWorkout": {
+        "aerobicFatigue": 5,
+        "muscularFatigue": 5,
+        "satisfaction": 7,
+        "notes": ""
+      },
+      "loadCalculation": {
+        "version": "trainleaf-v1",
+        "inputs": {
+          "trainingType": "team",
+          "durationMinutes": 90,
+          "aerobicFatigue": 5,
+          "muscularFatigue": 5
+        },
+        "parameters": {
+          "weights": {
+            "strength": 1.3,
+            "running": 1.05,
+            "endurance": 0.8,
+            "technical": 0.6,
+            "team": 1,
+            "mental": 0
+          },
+          "typeWeight": 1,
+          "fatigueMapping": {
+            "base": 0.5,
+            "perPoint": 0.1
+          }
+        },
+        "value": 90
+      },
+      "date": "2026-09-30",
+      "title": "Trening drużyny",
+      "durationMinutes": 90,
+      "rpe": null,
+      "notes": "",
+      "status": "completed",
+      "wasPlanned": false,
+      "time": null,
+      "plannedMinutes": null,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "be105196-9eec-456a-8050-7d484d1ee64b",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.759Z",
+      "updatedAt": "2026-10-04T22:24:47.759Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "strength",
+      "trainingType": "strength",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null
+      },
+      "plannedLoadCalculation": null,
+      "postWorkout": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null,
+        "satisfaction": null,
+        "notes": ""
+      },
+      "loadCalculation": null,
+      "date": "2026-09-29",
+      "title": "Pominięta siła",
+      "durationMinutes": null,
+      "rpe": null,
+      "notes": "",
+      "status": "skipped",
+      "wasPlanned": true,
+      "time": null,
+      "plannedMinutes": 50,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "42cdbcc2-de4a-4c07-8dfb-daf5d9394f4f",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.765Z",
+      "updatedAt": "2026-10-04T22:24:47.765Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "strength",
+      "trainingType": "strength",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null
+      },
+      "plannedLoadCalculation": null,
+      "postWorkout": {
+        "aerobicFatigue": 6,
+        "muscularFatigue": 7,
+        "satisfaction": 7,
+        "notes": ""
+      },
+      "loadCalculation": {
+        "version": "trainleaf-v1",
+        "inputs": {
+          "trainingType": "strength",
+          "durationMinutes": 60,
+          "aerobicFatigue": 6,
+          "muscularFatigue": 7
+        },
+        "parameters": {
+          "weights": {
+            "strength": 1.3,
+            "running": 1.05,
+            "endurance": 0.8,
+            "technical": 0.6,
+            "team": 1,
+            "mental": 0
+          },
+          "typeWeight": 1.3,
+          "fatigueMapping": {
+            "base": 0.5,
+            "perPoint": 0.1
+          }
+        },
+        "value": 102.96000000000001
+      },
+      "date": "2026-09-28",
+      "title": "Siła A",
+      "durationMinutes": 60,
+      "rpe": null,
+      "notes": "",
+      "status": "completed",
+      "wasPlanned": false,
+      "time": null,
+      "plannedMinutes": null,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "78175633-0780-49b3-92df-ec59d275c1c8",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.752Z",
+      "updatedAt": "2026-10-04T22:24:47.752Z",
+      "syncState": "local-only",
+      "deletedAt": null
+    },
+    {
+      "profileId": "local-profile",
+      "sportId": "ultimate",
+      "trainingType": "technical",
+      "supersets": [],
+      "plannedFatigue": {
+        "aerobicFatigue": null,
+        "muscularFatigue": null
+      },
+      "plannedLoadCalculation": null,
+      "postWorkout": {
+        "aerobicFatigue": 2,
+        "muscularFatigue": 2,
+        "satisfaction": 7,
+        "notes": ""
+      },
+      "loadCalculation": {
+        "version": "trainleaf-v1",
+        "inputs": {
+          "trainingType": "technical",
+          "durationMinutes": 30,
+          "aerobicFatigue": 2,
+          "muscularFatigue": 2
+        },
+        "parameters": {
+          "weights": {
+            "strength": 1.3,
+            "running": 1.05,
+            "endurance": 0.8,
+            "technical": 0.6,
+            "team": 1,
+            "mental": 0
+          },
+          "typeWeight": 0.6,
+          "fatigueMapping": {
+            "base": 0.5,
+            "perPoint": 0.1
+          }
+        },
+        "value": 8.819999999999999
+      },
+      "date": "2026-09-27",
+      "title": "Usunięty wpis",
+      "durationMinutes": 30,
+      "rpe": null,
+      "notes": "",
+      "status": "completed",
+      "wasPlanned": false,
+      "time": null,
+      "plannedMinutes": null,
+      "sections": {
+        "warmup": [],
+        "main": [],
+        "cooldown": []
+      },
+      "planNotes": "",
+      "periodId": null,
+      "id": "fc2d2d00-de86-46f9-a186-853326b75548",
+      "revision": 2,
+      "createdAt": "2026-10-04T22:24:47.778Z",
+      "updatedAt": "2026-10-04T22:24:47.781Z",
+      "syncState": "local-only",
+      "deletedAt": "2026-10-04T22:24:47.781Z"
+    }
+  ],
+  "customExercises": [],
+  "exerciseNotes": [],
+  "templates": [],
+  "periods": [
+    {
+      "profileId": "local-profile",
+      "name": "Sezon halowy",
+      "start": "2026-09-01",
+      "end": "2026-12-20",
+      "level": "macro",
+      "parentId": null,
+      "description": "",
+      "goal": "",
+      "preset": null,
+      "id": "52d2f08f-5990-44d0-b9f2-ad6e84d789cb",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.798Z",
+      "updatedAt": "2026-10-04T22:24:47.798Z",
+      "syncState": "local-only"
+    }
+  ],
+  "events": [
+    {
+      "profileId": "local-profile",
+      "kind": "competition",
+      "title": "Turniej",
+      "start": "2026-10-10",
+      "end": "2026-10-11",
+      "time": null,
+      "location": "",
+      "notes": "",
+      "availability": null,
+      "id": "a80ff827-8811-44a0-b171-701ee0abd36f",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.801Z",
+      "updatedAt": "2026-10-04T22:24:47.801Z",
+      "syncState": "local-only"
+    }
+  ],
+  "readinessReferences": [
+    {
+      "profileId": "local-profile",
+      "name": "Mój typowy tydzień",
+      "source": "example-week",
+      "weekStart": "2026-09-21",
+      "dailyLoads": [
+        80,
+        0,
+        60,
+        0,
+        45.5,
+        0,
+        0
+      ],
+      "confirmedComplete": true,
+      "confirmedRestDays": [
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "id": "8adac8d3-8e62-41e3-86cb-f553cf493847",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.794Z",
+      "updatedAt": "2026-10-04T22:24:47.794Z",
+      "syncState": "local-only",
+      "referenceLoad": 185.5,
+      "version": "readiness-v1",
+      "parameters": {
+        "lookbackDays": 21,
+        "halfLives": [
+          1,
+          2,
+          3
+        ]
+      }
+    }
+  ],
+  "exerciseRoles": [],
+  "muscleTargets": [],
+  "wellness": [
+    {
+      "profileId": "local-profile",
+      "date": "2026-09-29",
+      "slot": "morning",
+      "answers": {
+        "sleepHours": 7.5,
+        "sleepQuality": 4,
+        "fatigue": 3,
+        "soreness": 5
+      },
+      "notes": "Po sile",
+      "id": "0f324ae1-0218-403a-93cb-5e21e80c898f",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.784Z",
+      "updatedAt": "2026-10-04T22:24:47.784Z",
+      "syncState": "local-only"
+    },
+    {
+      "profileId": "local-profile",
+      "date": "2026-10-01",
+      "slot": "evening",
+      "answers": {
+        "fatigue": 6,
+        "soreness": 4,
+        "stress": 2,
+        "recovery": 3
+      },
+      "notes": "",
+      "id": "e62c02d1-dc2c-48cf-b99d-49b5aac2efcf",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.789Z",
+      "updatedAt": "2026-10-04T22:24:47.789Z",
+      "syncState": "local-only"
+    }
+  ],
+  "goals": [
+    {
+      "profileId": "local-profile",
+      "name": "Trzy treningi",
+      "metric": "count",
+      "cadence": "weekly",
+      "start": null,
+      "end": null,
+      "sportId": null,
+      "target": 3,
+      "id": "6be40a0e-6e6b-4a51-b725-a3ef89c272ae",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.808Z",
+      "updatedAt": "2026-10-04T22:24:47.808Z",
+      "syncState": "local-only"
+    }
+  ],
+  "drafts": [
+    {
+      "profileId": "local-profile",
+      "kind": "workout",
+      "entityId": null,
+      "baseRevision": null,
+      "epoch": 0,
+      "raw": {
+        "form": {
+          "title": "Surowy szkic  ",
+          "plannedMinutes": "4o"
+        }
+      },
+      "id": "791dcf91-8213-45e9-b3d2-d7efea8f6b44",
+      "revision": 1,
+      "createdAt": "2026-10-04T22:24:47.815Z",
+      "updatedAt": "2026-10-04T22:24:47.815Z",
+      "syncState": "local-only"
+    }
+  ],
+  "format": "training-companion-backup",
+  "version": 4,
+  "exportedAt": "2026-10-04T22:24:47.820Z"
+}

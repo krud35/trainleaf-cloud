@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "view": "journal",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "journal",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "history",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "history",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "plan",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "plan",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "library",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "library",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "progress",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "progress",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "settings",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "settings",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "onboarding",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "onboarding",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "wellness",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "wellness",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "period",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "period",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "templates",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "templates",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "export",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "view": "export",
+      "text": "200%",
+      "overflow": false
+    },
+    {
+      "view": "editor",
+      "text": "200%",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "draftReload": true,
+  "exercisePicker": true,
+  "saveError": true,
+  "saveRecovery": true
+}

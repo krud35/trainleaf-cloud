@@ -1,0 +1,19 @@
+.leaf-card{--blade:#E7F0D3;--leaf-ink:#63884E;--leaf-wash:#B1CE88;position:relative;isolation:isolate;display:block;box-sizing:border-box;width:100%;min-width:0;margin:4px 0;background:transparent;border:0;border-radius:0;padding:91px 46px 103px;color:#365532;text-align:left;overflow:visible;box-shadow:none}
+.leaf-card-checkin{padding:96px 38px 100px 54px;--blade:#E3EDCE;--leaf-ink:#5B7C49;--leaf-wash:#B4CC94;color:#2F4829}
+.leaf-card-goal{--blade:#F3E2BC;--leaf-ink:#98743E;--leaf-wash:#DFC287;color:#71481F}
+.leaf-card-copy{position:relative;z-index:1;min-width:0;overflow-wrap:anywhere;display:flex;flex-direction:column;gap:14px}
+.leaf-card-copy>*{margin:0;min-width:0}.leaf-card-copy h2,.leaf-card-copy h3{color:inherit;line-height:1.25}.leaf-card-copy p,.leaf-card-copy small,.leaf-card-copy .eyebrow{color:inherit}.leaf-card-copy .actions{flex-wrap:wrap}
+.leaf-card-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}.leaf-card-art path{vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+.leaf-card-blade{fill:var(--blade);stroke:var(--leaf-ink);stroke-width:1.4}.leaf-card-wash{fill:var(--leaf-wash);opacity:.16}.leaf-card-midrib{fill:none;stroke:var(--leaf-ink);stroke-width:1.5;opacity:.22}.leaf-card-veins{fill:none;stroke:var(--leaf-ink);stroke-width:1;opacity:.22}.leaf-card-edge{fill:none;stroke:var(--leaf-ink);stroke-width:.8;opacity:.32}.leaf-card-stem{fill:none;stroke:var(--leaf-ink);stroke-width:1.6}
+button.leaf-card{cursor:pointer;font:inherit}button.leaf-card:hover{background:transparent}button.leaf-card:focus-visible{outline:none}button.leaf-card:focus-visible .leaf-card-blade,.leaf-card:focus-within .leaf-card-blade{stroke:#2F6048;stroke-width:3.5}.leaf-card-copy :focus-visible{outline:3px solid #58754A;outline-offset:3px}
+.leaf-card-checkin .leaf-card-copy{text-align:center;align-items:center}.leaf-card-checkin h2{max-width:12ch;text-wrap:balance;font-size:1.87rem}.leaf-card-checkin p{text-wrap:balance}.leaf-card-checkin .primary{width:fit-content;max-width:100%;min-height:48px;margin-inline:auto;border-radius:28px;padding:12px 22px}
+@media(max-width:360px){.leaf-card{padding-inline:38px}.leaf-card-checkin{padding-inline:46px 34px}}
+@media(prefers-reduced-motion:reduce){.leaf-card,.leaf-card *{transition:none}}
+.leaf-card-copy{text-align:center;align-items:center}.leaf-card-copy .field,.leaf-card-copy progress{width:100%}.leaf-card-copy .actions{justify-content:center}.leaf-card-copy button{max-width:100%}
+.leaf-card-checkin { margin: 10px -6px 8px; width: calc(100% + 12px); }
+.leaf-card-checkin .leaf-card-copy { gap: 0; }
+.leaf-card-checkin .eyebrow { font-size: .68rem; letter-spacing: .12em; }
+.leaf-card-checkin small { font-size: .68rem; }
+.leaf-card-checkin h2 { font: 650 1.87rem/1.14 var(--sans); margin: 17px auto 14px; }
+.leaf-card-checkin p:not(.eyebrow) { font-size: .79rem; line-height: 1.55; margin: 0 auto 22px; }
+.leaf-card-checkin .checkin-action { display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 100%; min-height: 48px; margin: 0 auto; padding: 12px 22px; border-radius: 28px; color: white; background: var(--accent); font-size: .83rem; font-weight: 500; }

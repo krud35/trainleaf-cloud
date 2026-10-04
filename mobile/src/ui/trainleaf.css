@@ -1,0 +1,44 @@
+/* Shared paper, type, forms and the compact phone frame from iteration 3. */
+:root { font-family: 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif; color: #203B2C; background: #E9EDE3; line-height: 1.55; --ink: #203B2C; --muted: #58685D; --line: #D7DED1; --paper: #F7F8F2; --accent: #2F6048; --navy: var(--accent); --sage: #DCE8CC; --sand: #F0E1BE; --leaf: #C9D7B7; --serif: Georgia,'Times New Roman',serif; --sans: 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif; --section-gap: 30px; font-variant-numeric: tabular-nums; }
+html { scroll-padding-block: 24px calc(8rem + var(--safe-bottom)); }
+.app-shell { max-width: 440px; margin: auto; background: var(--paper); }
+.app-header { align-items: center; flex-wrap: nowrap; gap: 12px; min-height: 64px; margin-inline: max(20px,env(safe-area-inset-left)); padding: calc(12px + var(--safe-top)) 0 15px; background: var(--paper); color: var(--accent); border-bottom: 1px solid var(--line); }
+.brand { display: flex; color: var(--accent); min-height: 44px; font: 600 1.45rem/1.2 var(--sans); letter-spacing: -.045em; gap: 9px; }
+.brand > svg { color: var(--accent); width: 29px; height: 29px; }
+.brand small { display: block; font-size: .62rem; color: var(--muted); letter-spacing: .05em; font-weight: 400; margin-top: 4px; }
+.app-settings { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; min-height: 44px; border: 0; border-radius: 50%; padding: 10px; background: transparent; color: var(--ink); }
+.app-settings svg { width: 22px; height: 22px; }
+.brand:focus-visible { outline-color: #58754A; }
+main { max-width: 440px; padding: 27px max(20px,env(safe-area-inset-right)) calc(8rem + var(--safe-bottom)) max(20px,env(safe-area-inset-left)); }
+.view-frame[hidden] { display: none; }
+h1 { font: 400 2.4rem/1.08 var(--serif); letter-spacing: -.055em; }
+h2 { font-size: 1.14rem; }
+.page-heading { margin: 22px 0 24px; }
+.intro { font-size: .86rem; }
+.eyebrow { font-size: .66rem; font-weight: 650; }
+.card,.workout-card { background: #FDFEF9; border-color: #CFDAC6; box-shadow: none; border-radius: 7px; }
+.primary,.secondary { min-height: 48px; border-radius: 8px; }
+.primary { background: var(--accent); font-weight: 550; }
+.secondary { background: transparent; border-color: #9DAE95; font-weight: 500; }
+.secondary:hover:not(:disabled) { background: #EAF0E3; }
+.choice.selected,.module-choice:has(input:checked) { background: #E7EFDD; border-color: #7F9E80; }
+.field { color: #415842; }
+.field input,.field select,.field textarea { color: var(--ink); background: #FEFFF9; border-color: #9DAE95; border-radius: 7px; font-size: 1rem; }
+.field input::placeholder,.field textarea::placeholder { color: var(--muted); }
+.workout-date > span { color: #3F5848; background: #EDF2E8; }
+:where(button,a,input,select,textarea):focus-visible { outline-color: #58754A; }
+.shortcut-grid { display: grid; gap: 12px; grid-template-columns: minmax(0,1fr); }
+.shortcut-card { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 74px; text-align: left; background: #FDFEF9; border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+.range-field { display: grid; gap: 6px; padding: 16px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.range-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-weight: 650; }
+.range-heading output { font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+.range-field input[type=range] { width: 100%; min-width: 0; height: 48px; margin: 0; padding: 0; accent-color: #527454; touch-action: pan-y; }
+.range-field.unanswered input[type=range] { opacity: .55; }
+.range-ends { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; }
+.range-description { text-align: center; color: #36543E; font-weight: 600; }
+.range-field .optional { margin: 0; text-align: center; }
+.range-field .field-hint { margin-bottom: 0; }
+.sport-group { display: grid; gap: 10px; }
+.settings-privacy { font-size: .9rem; color: var(--muted); }
+@media(min-width:720px) { .app-shell { box-shadow: 0 14px 60px #294B3410; } }
+@media(min-width:840px) { .app-header { padding-inline: 0; } main { padding-top: 27px; } }

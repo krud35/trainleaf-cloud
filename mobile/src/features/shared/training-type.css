@@ -1,0 +1,4 @@
+.training-type-surface { background: var(--training-bg, #E9EDE6); color: var(--training-ink, #4D5D51); }
+.training-type-badge { display: inline-flex; align-items: center; gap: .4em; width: fit-content; max-width: 100%; padding: .25em .55em; border-radius: 6px; background: var(--training-bg, #E9EDE6); color: var(--training-ink, #4D5D51); font-size: .8rem; font-weight: 650; line-height: 1.4; }
+.training-type-badge svg { flex-shrink: 0; }
+.training-type-badge > span { min-width: 0; overflow-wrap: anywhere; }

@@ -1,0 +1,6 @@
+import http from 'node:http';
+import {readFile} from 'node:fs/promises';
+const allowed=['index.html','app.js','data.js','demo-history.js','history-ui.js','style.css','ui-core.js','leaf-ui.js','feeling-ui.js','week-ui.js','week-ui.css','profile-ui.js','profile-ui.css','exercise-editor.js','exercise-editor.css','iteration.css','load-model.js','session-ui.js','planning-ui.js','planning-ui.css','insights-ui.js','insights-ui.css','energy-model.js','anatomy-ui.js','anatomy-ui.css','iteration3.css','appearance-bootstrap.js','appearance-ui.css','theme.css','anatomy/geometry.js','anatomy/vendor/three.module.js','anatomy/vendor/three.core.js'];
+const files=Object.fromEntries(allowed.map(file=>['/'+file,file]));files['/']='index.html';
+http.createServer(async(req,res)=>{const file=files[new URL(req.url,'http://localhost').pathname];if(!file){res.writeHead(404);res.end();return}try{const data=await readFile(new URL(file,import.meta.url));res.setHeader('Content-Type',file.endsWith('.js')?'text/javascript; charset=utf-8':file.endsWith('.css')?'text/css; charset=utf-8':'text/html; charset=utf-8');res.end(data)}catch{res.writeHead(500);res.end()}}).listen(4186,'127.0.0.1',()=>console.log('Prototype http://127.0.0.1:4186'));
+

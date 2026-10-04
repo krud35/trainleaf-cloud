@@ -1,0 +1,90 @@
+[
+  {
+    "name": "today",
+    "overflow": false,
+    "contrast": {
+      "minimum": 4.75,
+      "failures": []
+    }
+  },
+  {
+    "name": "library-long",
+    "overflow": false,
+    "contrast": {
+      "minimum": 5.33,
+      "failures": []
+    }
+  },
+  {
+    "name": "editor",
+    "overflow": false,
+    "contrast": {
+      "minimum": 4.7,
+      "failures": []
+    }
+  },
+  {
+    "name": "editor-200",
+    "overflow": false,
+    "contrast": {
+      "minimum": 4.7,
+      "failures": []
+    }
+  },
+  {
+    "name": "plan",
+    "overflow": false,
+    "contrast": {
+      "minimum": 5.33,
+      "failures": []
+    }
+  },
+  {
+    "name": "period",
+    "overflow": false,
+    "contrast": {
+      "minimum": 5.33,
+      "failures": []
+    }
+  },
+  {
+    "name": "checkin",
+    "overflow": false,
+    "contrast": {
+      "minimum": 4.88,
+      "failures": []
+    }
+  },
+  {
+    "name": "progress",
+    "overflow": false,
+    "contrast": {
+      "minimum": 4.75,
+      "failures": []
+    }
+  },
+  {
+    "name": "more",
+    "overflow": false,
+    "contrast": {
+      "minimum": 5.33,
+      "failures": []
+    }
+  },
+  {
+    "name": "profile",
+    "overflow": false,
+    "contrast": {
+      "minimum": 5.33,
+      "failures": []
+    }
+  },
+  {
+    "name": "empty",
+    "overflow": false,
+    "contrast": {
+      "minimum": 4.75,
+      "failures": []
+    }
+  }
+]

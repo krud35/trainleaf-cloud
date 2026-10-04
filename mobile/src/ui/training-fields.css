@@ -1,0 +1,16 @@
+.training-help { position: relative; display: inline-flex; vertical-align: middle; }
+button.training-help-button { min-height: 44px; width: 44px; padding: 0; border-radius: 50%; font-size: .85rem; background: var(--paper, #faf8ef); border: 1px solid var(--line, #bbc6b7); color: var(--ink, #2d3f32); }
+.training-help-popup { position: fixed; bottom: max(24px, env(safe-area-inset-bottom)); left: 16px; right: 16px; z-index: 70; width: auto; max-width: 28rem; max-height: 60vh; overflow: auto; margin: 0 auto; padding: 20px; background: var(--paper, #fffef8); border: 1px solid var(--line, #bbc6b7); border-radius: 16px; box-shadow: 0 8px 25px #253a2725; color: var(--ink, #2d3f32); font-size: .9rem; font-weight: 400; line-height: 1.5; }
+.training-help-popup button { display: block; margin-top: 10px; min-height: 36px; }
+.training-superset { border: 1px solid var(--line, #bbc6b7); border-left: 3px solid var(--accent); border-radius: 3px 18px 3px 3px; padding: 16px 14px; margin: 16px 0; background: var(--sage, #dce8cc); }
+.training-superset-members { display: grid; gap: 8px; padding: 0; list-style: none; }
+.training-superset-members li { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.training-superset-members li span { flex: 1 1 10rem; }
+.training-superset-members button { min-height: 40px; padding: 6px 10px; }
+.training-superset-picker { display: grid; gap: 10px; padding: 14px; border: 1px dashed var(--line, #bbc6b7); border-radius: 12px; }
+.training-superset-picker .choice { display: flex; align-items: center; gap: 10px; }
+.training-superset-picker .choice input { width: 20px; height: 20px; }
+.training-rounds { font-size: .88rem; line-height: 1.6; max-height: 12rem; overflow: auto; }
+.training-periods { padding: 14px 18px; border-left: 3px solid var(--accent, #597c44); }
+.training-periods ul { margin: 10px 0 0; padding-left: 18px; }
+.we-item.is-grouped, .library-template-item.is-grouped { border-left: 4px solid var(--accent, #597c44); }

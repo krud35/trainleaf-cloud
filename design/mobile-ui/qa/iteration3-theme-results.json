@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-04",
+  "scope": "design/mobile-ui only",
+  "preview": "http://127.0.0.1:4186/?demo=six-months&v=iteration3-theme",
+  "appearanceLogic": "PASS: node check-appearance.mjs; VM and actual app event handlers",
+  "anatomyLogic": "PASS: node anatomy/check-theme.mjs; real Three geometry, fake DOM/renderer",
+  "stylesheetsParsed": 11,
+  "checkedContrastPairs": 70,
+  "minimumTextContrast": 4.73,
+  "minimumControlAndChartContrast": 3.54,
+  "contrastScope": "Selected source-color pairs and leaf hover/wash composites; not a browser cascade or accessibility audit",
+  "runtimeSyntax": "PASS: appearance-bootstrap.js, app.js, ui-core.js, anatomy-ui.js, anatomy/geometry.js",
+  "localHttp": "PASS: /, /appearance-bootstrap.js, /appearance-ui.css, /theme.css, /anatomy/geometry.js returned 200",
+  "visualQA": "NOT RUN: CUA trusted Node process exits before browser connection",
+  "androidQA": "NOT RUN: native bars, device startup, safe area, keyboard and WebGL require Android integration",
+  "localization": "STOPPED: no translation implementation; new PL strings listed in THEME-HANDOFF.md"
+}

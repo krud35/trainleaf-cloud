@@ -1,0 +1,9 @@
+.workout-editor .planned-fatigue-fields, .muscle-roles-fields { min-width: 0; position: relative; border: 0; padding: 0; margin: 0; display: grid; gap: 12px; }
+.workout-editor .planned-fatigue-fields > legend { float: none; margin-bottom: 8px; font-size: .95rem; font-weight: 600; }
+.muscle-roles-editor { border-top: 1px solid #d6dfd0; padding-top: 12px; margin-top: 12px; }
+.muscle-roles-editor > summary { cursor: pointer; padding: 8px 0; font-size: .9rem; }
+.muscle-role-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; min-width: 0; }
+.muscle-role-row > span { flex: 1 1 130px; overflow-wrap: anywhere; font-size: .85rem; }
+.muscle-role-row > select { flex: 1 1 130px; min-width: 0; }
+.muscle-role-add { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 380px) { .muscle-role-add { grid-template-columns: 1fr; } }

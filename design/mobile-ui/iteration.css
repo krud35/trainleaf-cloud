@@ -1,0 +1,86 @@
+/* Iteration 04: readable controls around the approved botanical surfaces. */
+.type-badge{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 9px;border-radius:7px;background:var(--type-bg);color:var(--type-ink);font-size:.75rem;font-weight:600;line-height:1.4}
+.type-badge svg{width:17px;height:17px;flex-shrink:0}
+button:disabled{cursor:not-allowed;opacity:.58;transform:none}
+.session-card{display:block;width:100%;text-align:left;margin:12px 0;padding:18px;background:#FDFEF9;border:1px solid #CBD8C3;border-left:3px solid #94AD7E;border-radius:3px 12px 12px 3px}
+.session-card:hover{background:#EDF2E8}
+.session-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.session-state{font-size:.72rem;color:#53664B}
+.session-card>strong{display:block;font-size:1.15rem;font-weight:600;line-height:1.35;margin:15px 0 8px;overflow-wrap:anywhere}
+.session-card-meta,.session-card-sport,.session-card-note{display:block;font-size:.79rem;color:#4D6246;margin-top:5px}
+.session-card-note{padding-left:10px;border-left:2px solid #C6D6B8;margin:13px 0}
+.session-card-link{display:flex;align-items:center;justify-content:flex-end;gap:6px;font-size:.77rem;color:#36543C;margin-top:12px}
+.session-card-link svg{width:17px;height:17px}
+.is-completed{border-left-color:#536F58}
+.auto-period{padding:16px 0;border-block:1px solid var(--line);margin-bottom:18px}
+.auto-period ul{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:12px}
+.auto-period strong,.auto-period small{display:block;overflow-wrap:anywhere}
+.auto-period strong{font-size:.88rem;font-weight:550}
+.auto-period small,.auto-period p{font-size:.75rem;color:#52664B;margin:4px 0 0}
+.auto-period .eyebrow{font-size:.67rem}
+.filter-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}
+.filter-tabs button{font-size:.8rem;padding:10px 12px;min-height:48px}
+.period-list-row{display:grid;width:100%;gap:7px;text-align:left;padding:19px 0;border:0;border-bottom:1px solid var(--line);border-radius:0}
+.period-list-row strong{font:400 1.2rem/1.35 var(--serif);overflow-wrap:anywhere}
+.period-list-row>span{font-size:.75rem;color:#52664B}
+.period-list-row .tag{justify-self:start}
+.label-help{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.82rem;margin-top:20px}
+.label-help h2{margin:0}
+button.help-trigger{display:inline-grid;place-items:center;flex-shrink:0;min-width:44px;min-height:44px;width:44px;height:44px;border:0;padding:0;color:#315238;background:transparent;font-size:.9rem}
+button.help-trigger:before{content:'';position:absolute;width:23px;height:23px;border:1px solid #71915E;border-radius:50%;pointer-events:none}
+.help-dialog{border:1px solid #B2C49D;border-radius:18px;background:#F7F8F2;color:var(--ink);width:min(440px,calc(100% - 32px));padding:22px;max-height:85dvh;overflow:auto}
+.help-dialog::backdrop{background:#17302465}
+.help-dialog-heading{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.help-dialog h2{margin:0;font:400 1.45rem/1.25 var(--serif)}
+.help-dialog-heading button{flex-shrink:0;min-width:44px;border:0;padding:5px;font-size:1.4rem}
+.help-dialog p{font-size:.92rem;line-height:1.7;margin-bottom:0}
+.completion-action{margin-top:18px}
+#workout #chosen-type{margin:-10px 0 4px}
+#workout>.subtle{margin-top:-15px}
+#workout>.primary{margin-top:20px}
+#workout #future-message .notice{font-size:.83rem}
+#workout>.wide+button{margin-top:12px}
+.session-review-heading{display:grid;justify-items:start;gap:10px;padding:16px 0 20px;border-block:1px solid var(--line)}
+.session-review-heading>strong{font:400 1.3rem/1.4 var(--serif);overflow-wrap:anywhere}
+#post-session>.wide{margin-top:12px}
+#post-session .feeling-heading{align-items:start}
+#post-session .feeling-heading label{line-height:1.4}
+#post-session .feeling-value{flex-shrink:0}
+.form-aside{font-size:.77rem;color:#52634C}
+.exercise-metadata{display:grid;gap:6px;padding:15px 0;border-block:1px solid var(--line);font-size:.83rem}
+.survey-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;font-size:.78rem}
+.survey-summary dt{color:#4F6348}
+.survey-summary dd{margin:0;font-weight:600}
+.pending-metric{padding:18px 0;border-bottom:1px solid var(--line)}
+.pending-metric h2{margin:0}
+.pending-metric p{font-size:.81rem;color:#52634C}
+.load-summary{padding:20px;background:#E8EFDC;border:1px solid #C6D4B8;border-radius:8px 26px 8px 8px;margin:22px 0}
+.load-summary h2{margin:0;font-size:1rem}
+.load-summary strong{font:400 2.2rem/1.15 var(--serif);display:block;margin:12px 0}
+.load-summary p{font-size:.79rem;color:#41583A;margin-bottom:0}
+.large .session-card-top{align-items:start}
+.large .survey-summary{grid-template-columns:1fr;gap:6px}
+.large .survey-summary dd{margin-bottom:10px}
+.large .help-dialog{padding:18px}
+.large .help-dialog h2{font-size:1.1rem}
+.large .help-dialog-heading{flex-wrap:wrap}
+.large #post-session .feeling-heading{flex-wrap:wrap}
+.large #post-session .feeling-value{font-size:1.1rem}
+main[data-view=more]>section .page-heading{margin-bottom:24px}
+.large .shell nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.journal-heading>div>p::first-letter{text-transform:uppercase}
+.archive-filter{margin-top:22px}
+.archive-count{font-size:.8rem;color:#52634C;margin:16px 0}
+.activity-history{margin:28px 0;padding:24px 0;border-block:1px solid var(--line)}
+.activity-history h2{margin:0}
+.activity-history>.muted{font-size:.8rem}
+.activity-months{display:grid;gap:17px;margin-top:24px}
+.activity-month>div:first-child{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 12px;font-size:.79rem}
+.activity-month strong{font-weight:600}
+.activity-month small{font-weight:400;color:#52634C}
+.activity-track{height:7px;background:#E1E8D7;border-radius:6px;margin-top:7px;overflow:hidden}
+.activity-track span{display:block;height:100%;background:#71915E;border-radius:6px}
+.large .stats-pair{grid-template-columns:1fr}
+.large .stats-pair .metric{overflow-wrap:anywhere}
+.wellness-entry dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;font-size:.82rem}
+.wellness-entry dd{margin:0;font-weight:600}

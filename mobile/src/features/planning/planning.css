@@ -1,0 +1,103 @@
+.planning-dialog{width:min(480px,calc(100% - 24px));max-height:85dvh;max-height:85vh;overflow:auto;padding:24px;border:1px solid #A8BE9A;border-radius:18px;background:#F7F8F2;color:#1F2D26;box-shadow:0 12px 45px #1F2D2633}.planning-dialog::backdrop{background:#1F2D2670}.planning-dialog-heading{display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:20px}.planning-dialog-heading h2{min-width:0}.planning-dialog-heading button{min-width:48px;min-height:48px;flex-shrink:0;padding:6px}.planning-legend{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:12px}.planning-legend li{min-width:0}.planning-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:6px;color:#58685D;font-size:.85rem}.planning-breadcrumb button{min-height:44px}.planning-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.planning-view-switch{display:flex;gap:6px;flex-wrap:wrap}.planning-view-switch button[aria-pressed=true]{background:#E6EDE2;border:2px solid #2F6048}.planning-help{width:44px;height:44px;border-radius:50%;border:1px solid #A8BE9A;background:#F7F8F2;font-weight:750}.planning-context-heading{margin-bottom:0}.planning-projection{min-width:0}.planning-projection .empty-state{margin:0}.planning-surface{min-width:0}.planning-event-card{width:100%;text-align:left;min-width:0;display:flex;flex-direction:column;gap:5px;background:#EDF0E8;border:1px solid #ACBAA5;border-radius:10px;padding:14px;overflow-wrap:anywhere;color:#365532}.planning-event-card .planning-event-type{font-size:.85rem;font-weight:650}.planning-day-events{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}.planning-event-actions{display:flex;gap:8px;flex-wrap:wrap}.planning-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.planning-empty{color:#58685D;padding:12px 0}.planning-period-strip{display:flex;flex-wrap:wrap;gap:8px}.planning-period-strip button{white-space:normal;max-width:100%;min-height:44px}.planning-period-strip button[aria-pressed=true]{border:2px solid #2F6048;background:#E7F0D3}.planning-season-months{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}.planning-season-month{display:flex;flex-direction:column;gap:8px;text-align:left;border:1px solid #CBD6C5;border-radius:12px;background:#fff;padding:16px;min-height:120px}.planning-season-month strong{text-transform:capitalize}.planning-season-month small{color:#58685D}.planning-season-periods{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}.planning-season-periods button{width:100%;text-align:left;padding:14px;display:flex;flex-direction:column;gap:4px;min-width:0;border:1px solid #CBD6C5;border-radius:10px;background:#E7F0D3}.planning-season-periods button[aria-pressed=true]{border:2px solid #2F6048}.planning-season-periods small{color:#365532}.planning-period-level-meso{margin-inline-start:12px}.planning-period-level-micro{margin-inline-start:24px}.planning-section-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}.planning-section-list>li{min-width:0}.planning-calendar-navigation{display:flex;align-items:center;gap:10px}.planning-calendar-navigation h2{flex:1;min-width:0;text-align:center;text-transform:capitalize}.planning-calendar-navigation button{min-width:48px;padding-inline:10px}.planning-month-grid{display:grid;grid-template-columns:repeat(7,minmax(2.4rem,1fr));gap:3px;max-width:100%;overflow-x:auto;padding-block:5px 10px}.planning-month-weekday{text-align:center;color:#58685D;font-size:.85rem}.planning-month-day{position:relative;display:flex;flex-direction:column;gap:4px;min-width:0}.planning-month-day.outside-month{opacity:.6}.planning-month-day-select{position:relative;min-height:48px;background:#fff;border:1px solid #CBD6C5;border-radius:8px;width:100%;padding:4px;white-space:nowrap}.planning-month-day-select[aria-pressed=true]{border:2px solid #2F6048;background:#E6EDE2;border-radius:14px 4px 14px 4px}.planning-month-markers{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;min-height:14px}.planning-session-marker{height:7px;width:7px;border-radius:3px;background:var(--training-ink,#66766B)}.planning-event-marker{height:7px;width:14px;background:#6B765B;border-radius:2px}.planning-month-day .planning-month-date{font-weight:750;font-variant-numeric:tabular-nums}.planning-day-details{border-top:1px solid #D5DED2;padding-top:18px}.planning-day-details h3{font-family:Georgia,serif}.planning-day-actions{display:flex;flex-wrap:wrap;gap:8px}.planning-day-readiness{font-size:.8rem;color:#58685D;overflow-wrap:anywhere}.planning-day-session{display:flex;flex-direction:column;gap:8px;width:100%;min-width:0;border:1px solid var(--training-ink,#66766B);border-radius:12px;padding:16px;text-align:left;background:var(--training-bg,#EDF0E8);color:var(--training-ink,#365532);overflow-wrap:anywhere}.planning-day-session:hover{background:var(--training-bg,#EDF0E8)}.planning-session-heading{display:flex;justify-content:space-between;align-items:start;gap:10px}.planning-session-heading strong{min-width:0}.planning-day-session small{color:inherit}.planning-readiness-slot{padding:12px 0;border-top:1px solid #D5DED2}.planning-event-range{display:flex;gap:12px;flex-wrap:wrap}.planning-event-detail p{overflow-wrap:anywhere}.planning-event-detail .preserve-lines{white-space:pre-wrap}.planning-surface :focus-visible{outline:3px solid #58754A;outline-offset:3px}@media(max-width:480px){.planning-season-months{grid-template-columns:1fr}.planning-dialog{padding:18px}.planning-calendar-navigation{gap:6px}}
+
+
+/* Iteration 3: calendar first, with the same paper hierarchy as the prototype. */
+.planning-page { gap:16px; color:#263B2C; }
+.planning-page .planning-heading { margin:20px 0 0; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.planning-page .planning-heading h1 { margin:3px 0 0; font-size:2.65rem; line-height:1.13; }
+.planning-heading-leaf { width:55px; height:58px; flex:none; }
+.planning-view-switch { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; padding:4px; border:1px solid #C6D2B5; border-radius:12px 4px 12px 4px; background:#E6EDDA; }
+.planning-view-switch button { min-width:0; min-height:44px; padding:8px 3px; font-size:.8125rem; font-weight:400; color:#4B6240; border:0; border-radius:9px 3px 9px 3px; background:transparent; }
+.planning-view-switch button[aria-pressed=true] { border:0; background:#38583D; color:#FCF9F0; font-weight:650; box-shadow:0 2px 4px #31503818; }
+.planning-view-switch button:hover:not(:disabled) { background:#DCE7CE; }
+.planning-view-switch button[aria-pressed=true]:hover { background:#38583D; }
+.planning-breadcrumb { gap:3px 6px; margin:0; font-size:.75rem; color:#65735A; }
+.planning-breadcrumb .text-button { min-height:40px; min-width:0; max-width:100%; padding:7px 0; font-size:.7rem; font-weight:400; line-height:1.5; color:#4C6241; }
+.planning-breadcrumb button:last-child { color:#29472F; font-weight:650; }
+.planning-page>.planning-surface { border:0; border-radius:0; padding:0; background:transparent; gap:14px; }
+.planning-surface { min-width:0; max-width:100%; }
+.planning-help { min-width:0; width:28px; height:28px; min-height:28px; padding:0; margin-inline:auto; display:grid; place-items:center; border:1px solid #9AAB8B; border-radius:50%; background:transparent; color:#4D6540; font-family:Georgia,serif; font-size:1rem; font-weight:400; }
+.planning-create { display:grid; grid-template-columns:1fr 1.15fr .85fr; gap:7px; margin:3px 0 0; }
+.planning-create button { min-width:0; min-height:46px; padding:10px 5px; font-size:.75rem; border-radius:12px 4px 12px 4px; background:#ECF1E2; border-color:#B9CAA6; overflow-wrap:anywhere; }
+.planning-create button.primary { background:#34583E; color:#FFFDF7; }
+.planning-filters, .planning-calendar-list { min-width:0; max-width:100%; border:0; border-block:1px solid #CBD6BE; border-radius:0; padding:0; background:transparent; }
+.planning-filters>summary, .planning-calendar-list>summary { min-height:44px; padding:12px 0; font-size:.8125rem; font-weight:600; line-height:1.4; color:#3E5936; overflow-wrap:anywhere; }
+.planning-calendar-list .detail-content, .planning-filters .detail-content { padding:0 0 16px; }
+.planning-filters label { font-size:.8125rem; }
+.planning-filters .field input, .planning-filters .field select { min-height:44px; min-width:0; max-width:100%; font-size:.875rem; border:1px solid #B9CAA8; border-radius:8px; background:#FAFBF6; }
+.planning-filters .form-row { grid-template-columns:1fr; }
+.planning-period-strip { padding:12px 0; border-block:1px solid #CBD6BE; font-size:.8rem; }
+.planning-period-strip>span { color:#58685D; }
+.planning-periods { gap:10px; }
+.planning-periods>.section-heading { margin:0; }
+.planning-periods h2 { font-size:1rem; }
+.planning-projection { padding:22px 16px; border:1px solid #C6D4B8; border-radius:20px 5px 20px 5px; background:#EEF3E6; }
+.planning-month { gap:14px; }
+.planning-month-grid { display:grid; grid-template-columns:repeat(7,minmax(2.55rem,1fr)); min-width:19rem; gap:3px; align-items:stretch; overflow:visible; padding:0; max-width:none; }
+.planning-month-weekday { padding:5px; color:#506346; text-align:center; font-size:.6875rem; }
+.planning-month-day { display:flex; flex-direction:column; align-items:stretch; gap:3px; min-width:0; min-height:76px; padding:2px; border:1px solid transparent; border-radius:5px; background:#EAF0DF; }
+.planning-month-day.outside-month { opacity:1; background:#F0F1E9; color:#65705B; }
+.planning-month-day.selected { border-color:#69864E; background:#DCE8C7; }
+.planning-month-day-select { width:100%; min-height:32px; padding:5px 0; border:0; border-radius:4px; background:transparent; color:#385037; font-size:.6875rem; }
+.planning-month-day-select[aria-pressed=true] { border:0; border-radius:4px; background:transparent; }
+.planning-month-day-select[aria-current=date] { width:32px; align-self:center; border-radius:50%; background:#35563B; color:#FFFDF6; }
+.planning-month-day .planning-month-date { font-weight:400; }
+.planning-month .week-mini-session { min-height:64px; gap:2px; padding:4px 2px; }
+.planning-month .week-mini-type, .planning-month .week-mini-title, .planning-month .week-mini-foot { font-size:.6rem; }
+.planning-month .week-mini-type svg { width:15px; height:15px; }
+.planning-month-day>.planning-day-readiness { margin-top:4px; min-height:13px; padding-bottom:2px; }
+.planning-day-readiness { min-width:0; font-size:.8rem; color:#58685D; }
+.planning-day-details { gap:12px; padding-top:16px; border-top:1px solid #CCD6C2; }
+.planning-day-details h3 { margin:0; font-family:inherit; font-size:.9375rem; font-weight:650; line-height:1.45; }
+.planning-day-session { gap:8px; padding:13px; border:1px solid color-mix(in srgb,var(--training-ink),white 65%); border-left:3px solid var(--training-ink); border-radius:7px 15px 15px 7px; color:#253B2B; }
+.planning-day-session .training-type-badge { color:var(--training-ink); }
+.planning-session-heading strong { font-size:1rem; font-weight:600; line-height:1.4; }
+.planning-session-heading>span { font-size:.75rem; color:#526249; }
+.planning-day-session>span:not(.planning-session-heading) { font-size:.75rem; }
+.planning-day-session small { font-size:.75rem; color:#526249; }
+.planning-section-list { gap:12px; }
+.planning-empty { font-size:.875rem; padding:8px 0; margin:0; }
+.planning-readiness-slot { padding:0; border:0; }
+.planning-event-card { border:1px solid #9B795C; border-radius:8px 3px 8px 3px; background:#EEE0CD; color:#65492F; padding:12px; font-size:.8125rem; }
+.planning-event-card .planning-event-type { font-size:.75rem; }
+.planning-event-detail .card { background:#F0E5D2; border-color:#D6C7A6; border-radius:4px 30px 4px 4px; }
+.planning-season { gap:12px; }
+.planning-season-year { display:flex; justify-content:flex-end; align-items:center; gap:8px; color:#536749; font-size:.75rem; }
+.planning-season-year button { min-width:32px; min-height:32px; padding:3px; }
+.planning-season-choices, .planning-season-weeks { display:flex; gap:6px; min-width:0; max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; scrollbar-width:thin; scrollbar-color:#8CA17D #EDF2E5; padding:3px 0 9px; }
+.planning-season-choices button { flex:none; max-width:16rem; min-width:0; min-height:44px; padding:8px 12px; border:1px solid #B2C39B; border-radius:12px 3px 12px 3px; background:#EAF0DF; color:#456039; font-size:.75rem; font-weight:400; line-height:1.4; }
+.planning-season-choices button[aria-pressed=true] { background:#CEDDB5; border-color:#69864E; color:#2F4B2C; }
+.planning-season-title { display:flex; align-items:start; justify-content:space-between; gap:12px; min-width:0; }
+.planning-season-title>div { min-width:0; }
+.planning-season-title h2 { margin:0; font-family:Georgia,serif; font-size:1.15rem; font-weight:400; line-height:1.4; color:#2D482F; }
+.planning-season-title p { margin:4px 0 0; color:#57694C; font-size:.75rem; }
+.planning-season-title>button { min-height:44px; flex:none; padding:8px; font-size:.75rem; }
+.planning-timeline { min-width:0; max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; scrollbar-width:thin; scrollbar-color:#8CA17D #EDF2E5; padding:4px 0 10px; }
+.planning-timeline-canvas { min-width:21rem; min-height:80px; border-inline:1px solid #CCD8BE; background:repeating-linear-gradient(to right,transparent 0,transparent calc(100% / var(--timeline-columns) - 1px),#CCD8BE calc(100% / var(--timeline-columns) - 1px),#CCD8BE calc(100% / var(--timeline-columns))); }
+.planning-timeline-months { display:flex; margin-bottom:8px; border-bottom:1px solid #BECDAA; }
+.planning-timeline-months button { min-width:0; flex:1; min-height:32px; padding:5px 8px; border:0; border-radius:0; background:transparent; font-size:.6875rem; text-align:left; color:#5D6F50; }
+.planning-timeline-row { position:relative; min-height:60px; width:100%; margin:6px 0; padding-block:3px; }
+.planning-timeline-bar { position:relative; left:var(--period-left); width:var(--period-width); max-width:calc(100% - var(--period-left)); min-width:0; min-height:54px; display:flex; flex-direction:column; align-items:start; justify-content:center; padding:8px 10px; border:1px solid #8DA471; border-radius:9px 3px 9px 3px; background:#DCE8C8; color:#3F5A34; overflow:hidden; text-align:left; }
+.planning-timeline-bar>span, .planning-timeline-bar>small { display:block; min-width:0; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.planning-timeline-bar>span { font-size:.8125rem; font-weight:600; line-height:1.5; }
+.planning-timeline-bar>small { font-size:.625rem; }
+.planning-timeline-row.is-season .planning-timeline-bar { background:#78945B; border-color:#667D4F; border-radius:14px 3px 14px 3px; color:#FFFDF5; }
+.planning-timeline-row.is-event { min-height:46px; }
+.planning-timeline-event { min-height:44px; min-width:44px; padding:6px; background:#EBDCC5; border-color:#9B795C; color:#65492F; }
+.planning-timeline-event.calendar-event-multi { background:repeating-linear-gradient(135deg,#E7D6BD 0,#E7D6BD 6px,#EEDFCB 6px,#EEDFCB 12px); }
+.planning-season-weeks button { display:grid; gap:4px; flex:none; min-width:70px; min-height:52px; padding:8px; border:1px solid #C5D1B8; border-radius:11px 3px 11px 3px; background:#EEF3E4; color:#456039; text-align:left; font-size:.6875rem; font-weight:400; }
+.planning-season-weeks strong { font-size:.75rem; font-weight:600; }
+.planning-season-periods button { padding:12px 0; border:0; border-bottom:1px solid #CBD6BE; border-radius:0; background:transparent; font-size:.8rem; }
+.planning-season-months { padding:12px 0; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.planning-season-month { min-height:80px; padding:12px; border-radius:12px 3px 12px 3px; background:#EAF0DF; font-size:.75rem; }
+.planning-page :focus-visible { outline:3px solid #58754A; outline-offset:2px; }
+@media(max-width:360px) { .planning-create { gap:4px; } .planning-create button { font-size:.6875rem; } }
+@media(max-width:22rem) { .planning-create { grid-template-columns:1fr; } .planning-session-heading { flex-direction:column; } .planning-season-months { grid-template-columns:1fr; } }
+@media(prefers-reduced-motion:reduce) { .planning-page * { scroll-behavior:auto; } }
+/* 0.4.1 B: season header - one centred year between the year arrows, close to the view switch. */
+.planning-page .planning-season { gap:8px; }
+.planning-season-year { justify-content:center; gap:4px; font-size:1rem; }
+.planning-season-year h2 { margin:0; min-width:4.5ch; text-align:center; font-family:Georgia,serif; font-size:1.75rem; font-weight:400; line-height:1.2; color:#2D482F; font-variant-numeric:tabular-nums; }
+.planning-season-year button { min-width:44px; min-height:44px; padding:6px; font-size:1.25rem; }
+.planning-season-title h3 { margin:0; font-family:Georgia,serif; font-size:1.15rem; font-weight:400; line-height:1.4; color:#2D482F; }
+:root[data-theme="dark"] :is(.planning-season-year h2,.planning-season-title h3) { color:var(--ink); }

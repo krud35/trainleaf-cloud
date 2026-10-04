@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-04",
+  "scope": "design/mobile-ui only; production read-only",
+  "productionContractSha256AtRead": "67F8E0708E267E6E5BF570ED325EABFFD5F31D643E94DCFE141E05CC4C5F0821",
+  "rules": "Team post-audit D1-D8; heuristic parameters not separately numerically approved by the user",
+  "checks": [
+    {"name": "check-energy.mjs", "result": "pass", "executedBy": "reserve_contract_alignment agent", "cases": ["past plan unknown", "physical actual missing snapshot unknown", "mental physical zero without mutation", "historyStart does not confirm rest", "bulk confirms empty dates only", "known/full partial separation", "example reference does not confirm history", "latest tombstone excludes", "actual takes precedence over newer plan", "future completion unknown", "fixed S", "DST and year boundaries"]},
+    {"name": "check-iteration-insights.mjs", "result": "pass", "executedBy": "contract_ui_retest agent", "cases": ["sleep mean 7.9642857 versus target 8 gives 99 and met:false", "visual and accessible 7.96 versus 8", "missing and explicit zero", "exact and exceeded target", "other metrics unchanged"]},
+    {"name": "syntax app.js and week-ui.js", "result": "pass"},
+    {"name": "bulk confirmation browser flow", "result": "pass", "storage": "isolated qa=1", "range": {"start": "2026-09-13", "end": "2026-10-03"}, "emptyDays": 5, "occupiedDays": 16, "remainingUnknownSessions": 1},
+    {"name": "simulated save error", "result": "pass", "observed": "dates and checked confirmation preserved; retry succeeds"},
+    {"name": "range change", "result": "pass", "observed": "confirmation checkbox cleared"},
+    {"name": "example reference", "result": "pass", "observed": "label explicitly says the example does not confirm training history"},
+    {"name": "reference preview", "result": "pass", "observed": "seven daily rows, 6 actual sessions, total 406.1, past-plan uncertainty distinguished; preview does not save"},
+    {"name": "new form responsive", "result": "pass", "viewportWidth": 360, "documentScrollWidth": 345, "textScales": [100, 200]},
+    {"name": "preview console", "result": "pass", "errorsObserved": 0}
+  ],
+  "screenshots": ["iteration3-history-completeness-360.jpg", "iteration3-history-completeness-200.jpg"],
+  "notVerified": ["final APK", "SQLite migration", "native restart/update/share", "currently installed phone version", "physiological validity"],
+  "apkRetestPending": ["wellness back origin and nested return", "second check-in from Today", "season breadcrumb and year", "sleep goal near 100 percent"]
+}

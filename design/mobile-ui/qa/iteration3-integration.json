@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-04",
+  "method": "CUA browser UI with isolated qa=1 local data",
+  "viewport": 360,
+  "textScales": [
+    100,
+    200
+  ],
+  "verified": [
+    "Today expanded week has zero duplicate day-detail lists",
+    "Week help Escape restores focus to trigger",
+    "Session tile opens read-only detail before edit",
+    "Failed check-in save preserves note, form and explicit fatigue 0",
+    "Successful check-in save closes form; read-only detail displays 0 / 10",
+    "Reference candidate preview shows week, sessions, load and uncompleted-plan count before confirmation",
+    "Reference snapshot saved to separate QA demo; calendar returns",
+    "Month and season views include one-day and multiday events",
+    "Event form creates multiday event then returns to season",
+    "Sleep goal starts blank; explicit7.5 target saves with morning completeness",
+    "Wellness metric choices change with exact day slot",
+    "All four main views no page overflow at360px/200%"
+  ],
+  "notes": [
+    "Fake test check-in, event, reference and goal are confined to -qa storage.",
+    "Component anatomy/calendar tests separately cover scene/fallback and popup interactions."
+  ]
+}

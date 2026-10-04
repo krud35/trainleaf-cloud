@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Unselected sliders do not count as answers",
+    "Rano: Jakość snu · 1–5, every label + keyboard + skip",
+    "Rano: Zmęczenie · 0–10, every label + keyboard + skip",
+    "Rano: Bolesność mięśni · 0–10, every label + keyboard + skip",
+    "W ciągu dnia: Energia · 1–5, every label + keyboard + skip",
+    "W ciągu dnia: Stres · 0–10, every label + keyboard + skip",
+    "W ciągu dnia: Nastrój · 1–5, every label + keyboard + skip",
+    "W ciągu dnia: Koncentracja · 1–5, every label + keyboard + skip",
+    "Wieczorem: Zmęczenie · 0–10, every label + keyboard + skip",
+    "Wieczorem: Bolesność mięśni · 0–10, every label + keyboard + skip",
+    "Wieczorem: Stres · 0–10, every label + keyboard + skip",
+    "Wieczorem: Czas na odpoczynek · 1–5, every label + keyboard + skip",
+    "Zero persists, unanswered values stay empty after reload",
+    "360 px and 200% text, sliders and context cards"
+  ]
+}

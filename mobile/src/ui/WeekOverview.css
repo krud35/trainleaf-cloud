@@ -1,0 +1,33 @@
+/* A compact paper calendar; horizontal scrolling belongs to its named region. */
+.week-overview { min-width:0; gap:14px; }
+.week-navigation, .planning-calendar-navigation { display:grid; grid-template-columns:40px minmax(0,1fr) 40px 32px; gap:4px; align-items:center; }
+.week-navigation h2, .planning-calendar-navigation h2 { min-width:0; margin:0; text-align:center; font-family:inherit; font-size:.875rem; font-weight:650; line-height:1.4; overflow-wrap:anywhere; }
+.week-navigation>.secondary, .planning-calendar-navigation>.secondary { min-width:0; width:40px; min-height:44px; padding:5px; border:0; border-radius:14px 4px 14px 4px; background:#E8EFD9; color:#315038; font-size:1.1rem; }
+.planning-calendar-scroll { min-width:0; max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; scrollbar-width:thin; scrollbar-color:#8CA17D #EDF2E5; padding:3px 0 8px; border-block:1px solid #CAD5BF; }
+.week-grid { display:grid; grid-template-columns:repeat(7,minmax(2.55rem,1fr)); gap:3px; min-width:19rem; align-items:stretch; }
+.week-day { min-width:0; display:flex; flex-direction:column; gap:5px; padding:0 2px 4px; border-radius:9px 9px 14px 4px; background:#EEF2E5; }
+.week-day.selected { background:#DFE8CD; box-shadow:inset 0 0 0 1px #788E60; }
+.week-day-select { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; width:100%; min-height:55px; padding:5px 0 11px; border:0; border-radius:8px; color:#465641; background:transparent; }
+.week-day-select>span { font-size:.7rem; line-height:1.3; }
+.week-day-select strong { color:#2C4328; font-size:.9375rem; line-height:1.2; font-variant-numeric:tabular-nums; }
+.week-day-select>i { position:absolute; bottom:4px; width:4px; height:4px; border-radius:50%; background:#315038; }
+.week-mini-list { min-width:0; display:grid; gap:5px; align-content:start; flex:1; }
+.week-mini-session { display:flex; flex-direction:column; align-items:stretch; gap:3px; min-width:0; width:100%; min-height:79px; padding:6px 3px; text-align:left; border:1px solid color-mix(in srgb,var(--training-ink),white 64%); border-radius:6px 6px 10px 3px; background:var(--training-bg); color:var(--training-ink); line-height:1.35; overflow:hidden; }
+.week-mini-session:hover { background:var(--training-bg); filter:brightness(.975); }
+.calendar-session-past-plan { border-style:dashed; }
+.calendar-session-completed { border-bottom-width:3px; }
+.week-mini-type { display:grid; justify-items:start; gap:2px; min-width:0; width:100%; font-size:.625rem; font-weight:650; }
+.week-mini-type svg { flex:none; width:17px; height:17px; margin:0; }
+.week-mini-type>span, .week-mini-title { min-width:0; max-width:100%; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.week-mini-title { font-size:.625rem; font-weight:500; }
+.week-mini-foot { display:flex; gap:2px; flex-wrap:wrap; align-items:center; max-width:100%; margin-top:auto; font-size:.625rem; line-height:1.3; }
+.week-mini-time { white-space:nowrap; font-variant-numeric:tabular-nums; }
+.week-mini-status { font-size:inherit; }
+.week-mini-event { display:flex; flex-direction:column; align-items:start; gap:3px; min-width:0; width:100%; min-height:45px; padding:5px 2px; border:1px solid #9B795C; border-radius:8px 3px 8px 3px; background:#EEE0CD; color:#65492F; font-size:.625rem; line-height:1.4; text-align:left; overflow:hidden; }
+.week-mini-event>span:last-child { min-width:0; max-width:100%; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.calendar-event-multi { border-inline:3px solid #866642; background:repeating-linear-gradient(135deg,#E7D6BD 0,#E7D6BD 6px,#EEDFCB 6px,#EEDFCB 12px); }
+.calendar-empty { display:block; text-align:center; padding:14px 0; color:#647358; font-size:.875rem; }
+.week-day>.planning-day-readiness { display:flex; align-items:center; justify-content:center; min-height:27px; margin-top:5px; border-top:1px solid #CCD7BD; }
+.week-overview button:focus-visible, .planning-calendar-scroll:focus-visible { outline:3px solid #315D3E; outline-offset:-3px; }
+.week-overview-today .week-navigation h2 { font-size:.875rem; }
+:root[data-font-size=large] .week-grid, .large .week-grid { min-width:21rem; }

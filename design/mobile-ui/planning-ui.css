@@ -1,0 +1,89 @@
+/* Calendar is the dominant planning surface. Navigation follows the garden palette. */
+.plan-calendar{min-width:0;max-width:100%;color:#263B2C}
+.plan-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
+.plan-heading h1{margin:3px 0 0}
+.plan-heading__leaf{width:55px;height:58px;flex:none}
+.plan-heading__leaf svg{width:100%;height:100%}
+.plan-modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;background:#E6EDDA;border:1px solid #C6D2B5;border-radius:12px 4px 12px 4px}
+.plan-modes button{min-height:44px;padding:8px 3px;min-width:0;border:0;border-radius:9px 3px 9px 3px;font-size:.8125rem;color:#4B6240;overflow-wrap:anywhere}
+.plan-modes button[aria-pressed=true]{background:#38583D;color:#FCF9F0;font-weight:650;box-shadow:0 2px 4px #31503818}
+.plan-breadcrumbs{display:flex;align-items:center;flex-wrap:wrap;gap:3px 6px;margin:5px 0 0;color:#65735A;min-width:0}
+.plan-breadcrumbs button{min-height:40px;min-width:0;max-width:100%;padding:7px 0;background:transparent;border:0;border-radius:2px;font-size:.7rem;text-align:left;overflow-wrap:anywhere;color:#4C6241}
+.plan-breadcrumbs button[aria-current=page]{font-weight:650;color:#29472F}
+.plan-breadcrumbs>span{font-size:.75rem}
+.plan-create{display:grid;grid-template-columns:1fr 1.15fr .85fr;gap:7px;margin:20px 0 14px}
+.plan-create button{padding:10px 5px;min-width:0;min-height:46px;font-size:.75rem;border-radius:12px 4px 12px 4px;background:#ECF1E2;border-color:#B9CAA6;overflow-wrap:anywhere}
+.plan-create button.primary{background:#34583E;color:#FFFDF7}
+.plan-create svg{width:17px;height:17px;margin:0 3px 0 0}
+.plan-filters,.plan-month__list,.plan-season__list{border:0;border-block:1px solid #CBD6BE;border-radius:0;padding:0;background:transparent;margin:12px 0 0;min-width:0;max-width:100%}
+.plan-filters>summary,.plan-month__list>summary,.plan-season__list>summary{font-size:.8125rem;line-height:1.4;color:#3E5936;padding:12px 0;min-height:44px;overflow-wrap:anywhere}
+.plan-filters>summary svg{width:18px;height:18px;margin-right:7px;vertical-align:middle}
+.plan-filters>div{display:grid;gap:12px;margin:0 0 16px}
+.plan-filters label{display:grid;gap:5px;min-width:0;font-size:.8125rem}
+.plan-filters input,.plan-filters select{font-size:.875rem;max-width:100%;min-width:0;width:100%;min-height:44px;border:1px solid #B9CAA8;background:#FAFBF6;border-radius:8px;padding:10px;margin:0}
+.plan-month{min-width:0}
+.plan-month__heading{display:grid;grid-template-columns:40px minmax(0,1fr) 40px 32px;align-items:center;gap:4px;margin:10px 0}
+.plan-month__heading h2{margin:0;text-align:center;font-size:.9375rem;line-height:1.4;overflow-wrap:anywhere}
+.plan-month__heading>button:not(.help-trigger){min-height:44px;padding:5px;border:0;border-radius:14px 4px 14px 4px;background:#E8EFD9;color:#315038}
+.plan-month__scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#8CA17D #EDF2E5;padding:3px 0 8px}
+.plan-month__grid{display:grid;grid-template-columns:repeat(7,minmax(2.55rem,1fr));min-width:19rem;gap:3px;align-items:stretch}
+.plan-month__weekday{font-size:.6875rem;color:#506346;text-align:center;padding:5px}
+.plan-month__day{display:flex;align-items:stretch;flex-direction:column;min-width:0;min-height:76px;background:#EAF0DF;border-radius:5px;padding:2px;gap:3px;border:1px solid transparent}
+.plan-month__day.is-outside{background:#F0F1E9;color:#65705B}
+.plan-month__day.is-selected{border-color:#69864E;background:#DCE8C7}
+.plan-month__day>button{min-height:32px;border:0;background:transparent;padding:5px 0;border-radius:4px;font-size:.6875rem;width:100%;color:#385037}
+.plan-month__day>button[aria-current=date]{background:#35563B;color:#FFFDF6;border-radius:50%;align-self:center;width:32px}
+.plan-month__sessions{display:grid;gap:4px;align-content:start;flex:1;min-width:0}
+.plan-month .week-mini{min-height:64px;gap:2px;padding:4px 2px}
+.plan-month .week-mini__type{font-size:.6rem}
+.plan-month .week-mini__type svg{width:15px;height:15px}
+.plan-month .week-mini__title{font-size:.6rem}
+.plan-month .week-mini__foot{font-size:.6rem}
+.plan-month__day>.calendar-energy{align-self:stretch;margin-top:4px;min-height:13px;padding-bottom:2px}
+.plan-month__energy-caption{margin:4px 0 0;font-size:.6875rem;min-width:0}
+.plan-month__list>div{padding-bottom:15px;display:grid;gap:13px;min-width:0}
+.plan-month__list-day{display:block;text-align:left;width:100%;border:0;border-bottom:1px solid #CAD6BD;border-radius:0;background:transparent;padding:12px 0;min-height:44px;font-size:.875rem;overflow-wrap:anywhere}
+.plan-season{min-width:0;margin-top:12px}
+.plan-season__choices{display:flex;gap:6px;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;padding:3px 0 9px}
+.plan-season__choices button{flex:none;max-width:16rem;min-width:0;min-height:44px;padding:8px 12px;border-radius:12px 3px 12px 3px;border-color:#B2C39B;background:#EAF0DF;color:#456039;font-size:.75rem;line-height:1.4;overflow-wrap:anywhere}
+.plan-season__choices button[aria-pressed=true]{background:#CEDDB5;border-color:#69864E;color:#2F4B2C}
+.plan-season__title{display:flex;align-items:start;justify-content:space-between;gap:12px;margin:15px 0 10px;min-width:0}
+.plan-season__title>div{min-width:0}
+.plan-season__title h2{font-size:1.15rem;line-height:1.4;margin:0;font-family:Georgia,serif;font-weight:400;color:#2D482F}
+.plan-season__title p{font-size:.75rem;margin:4px 0 0;color:#57694C}
+.plan-season__title>button{font-size:.75rem;min-height:44px;padding:8px;border:0;color:#45643A;background:transparent;border-radius:8px;flex:none}
+.plan-timeline{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#8CA17D #EDF2E5;padding:4px 0 10px}
+.plan-timeline__canvas{min-width:21rem;background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),#CCD8BE calc(25% - 1px),#CCD8BE 25%);border-inline:1px solid #CCD8BE;min-height:80px}
+.plan-timeline__months{display:flex;border-bottom:1px solid #BECDAA;margin-bottom:8px}
+.plan-timeline__months>span{flex:1;font-size:.6875rem;color:#5D6F50;padding:5px 8px}
+.plan-timeline__row{position:relative;min-height:60px;margin:6px 0;width:100%;padding-block:3px}
+.plan-timeline .plan-timeline__bar{display:flex;flex-direction:column;align-items:start;justify-content:center;position:relative;left:var(--period-left);width:var(--period-width);max-width:calc(100% - var(--period-left));min-width:0;min-height:54px;padding:8px 10px;border:1px solid #8DA471;border-radius:9px 3px 9px 3px;background:#DCE8C8;color:#3F5A34;overflow:hidden;text-align:left}
+.plan-timeline__bar>span{display:block;width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:.8125rem;line-height:1.5;font-weight:600}
+.plan-timeline__bar>small{display:block;font-size:.625rem;white-space:nowrap;color:inherit;max-width:100%;text-overflow:ellipsis;overflow:hidden}
+.plan-timeline__row.is-season .plan-timeline__bar{background:#78945B;border-color:#667D4F;color:#FFFDF5;border-radius:14px 3px 14px 3px}
+.plan-timeline__row.is-event{min-height:46px}
+.plan-timeline .plan-timeline__bar.calendar-event{min-height:44px;background:#EBDCC5;border-color:#9B795C;color:#65492F;padding:6px;overflow:visible;min-width:44px;max-width:calc(100% - var(--period-left))}
+.plan-timeline .plan-timeline__bar.calendar-event--multi{background:repeating-linear-gradient(135deg,#E7D6BD 0,#E7D6BD 6px,#EEDFCB 6px,#EEDFCB 12px)}
+.plan-season__weeks{display:flex;gap:6px;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;padding:3px 0 9px;margin:8px 0}
+.plan-season__weeks button{display:grid;gap:4px;flex:none;min-height:52px;min-width:70px;padding:8px;border-color:#C5D1B8;border-radius:11px 3px 11px 3px;background:#EEF3E4;text-align:left;font-size:.6875rem;color:#456039}
+.plan-season__weeks button>strong{font-size:.75rem;font-weight:600}
+.plan-season__weeks button[aria-current=date]{background:#D3E0BF;border-color:#8A9F70}
+.plan-season__list>div{display:grid;gap:8px;margin:0 0 16px}
+.plan-season__period{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px;border-bottom:1px solid #CBD6BE;padding-block:5px}
+.plan-season__period>button{border:0;background:transparent;border-radius:4px;text-align:left;min-height:44px;padding:8px 0;min-width:0;font-size:.75rem;overflow-wrap:anywhere}
+.plan-season__period>button>strong,.plan-season__period>button>small{display:block;font-size:inherit;line-height:1.5}
+.plan-season__period>button>small{font-size:.6875rem;color:#536749;font-weight:400;margin-top:3px}
+.plan-season__empty{background:#EBF0E0;border:1px dashed #AEC096;border-radius:22px 5px 22px 5px;padding:24px 16px;margin-top:10px;color:#3E5734}
+.plan-season__empty>svg{width:32px;height:32px}
+.plan-season__empty h2{margin:12px 0 7px}
+.plan-season__empty p{font-size:.875rem}
+.large .plan-modes button{font-size:.75rem}
+.large .plan-create{grid-template-columns:1fr}
+.large .plan-create button{font-size:.875rem}
+.large .plan-month__grid{min-width:21rem}
+.large .plan-month__heading h2{font-size:.75rem}
+.large .plan-timeline__canvas{min-width:21rem}
+.large .plan-season__period{grid-template-columns:minmax(0,1fr)}
+@media(max-width:360px){.plan-calendar .plan-create{gap:4px}.plan-create button{font-size:.6875rem}.plan-calendar .plan-heading{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.plan-calendar *{scroll-behavior:auto}}
+

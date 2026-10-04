@@ -1,0 +1,21 @@
+{
+  "purpose": "Database and backup written by the released 0.4.0 sources, used to test migration 7 -> 8 and the import of older backups.",
+  "app": {
+    "versionName": "0.4.0",
+    "versionCode": 4,
+    "sourceCommit": "05fef61482094f5df45cdef11b0fa0fc13db1796"
+  },
+  "generatedAt": "2026-10-04T22:24:47.825Z",
+  "generator": "tests/support/mobile-0.4-fixture/build-fixture.mjs",
+  "database": {
+    "file": "released-v7.sqlite",
+    "schemaVersion": 7,
+    "sha256": "60d4da8d88bc351c728d817ff32fe4760ff0f0bdfead9ef4e42ed172ef6dd54e"
+  },
+  "backup": {
+    "file": "backup-v4.json",
+    "formatVersion": 4,
+    "sha256": "42e12a48f118acd840c9ba8dae24c4c5dcf8defa16ac219d7ae31450836af925"
+  },
+  "periodId": "52d2f08f-5990-44d0-b9f2-ad6e84d789cb"
+}

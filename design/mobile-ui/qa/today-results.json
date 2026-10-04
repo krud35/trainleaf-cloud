@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "Today title; pending check-in; history hidden",
+    "Completed check-in collapses and persists after reload; zero accepted",
+    "History remains accessible",
+    "Yesterday check-in does not hide prompt; inactive period excluded; planned and completed sessions shown",
+    "Check-in date independent of calendar selection",
+    "360 px at 200% without horizontal overflow"
+  ]
+}

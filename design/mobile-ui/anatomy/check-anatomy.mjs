@@ -1,0 +1,36 @@
+import {chromium,expect} from '@playwright/test';
+import {createServer} from 'node:http';
+import {readFile,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+import {anatomyCoverage,workingSets,normalizeMuscleRoles} from '../anatomy-ui.js';
+const roles={direct:['quads'],indirect:['glutes']};
+const ex={id:'x',name:'Przysiad testowy',kind:'Siła',sets:3,section:'main',muscleRoles:roles};
+const props={day:'2026-10-04',today:'2026-10-04',targets:{quads:{sets:5},glutes:{sets:1}},workouts:[{id:'a',date:'2026-10-02',status:'completed',trainingType:'strength',title:'Trening testowy',exercises:[ex,{...ex,id:'warm',section:'warmup',sets:10}],planned:{date:'2026-10-02',exercises:[{...ex,sets:5}]}}]};
+const calc=anatomyCoverage(props),get=(id,model=calc)=>model.groups.find(g=>g.id===id);
+assert.equal(get('quads').completedSets,3);assert.equal(get('glutes').completedSets,1.5);assert.equal(get('quads').plannedSets,5);assert.equal(get('glutes').status,'above');assert.equal(get('chest').target,null);
+assert.equal(workingSets({...ex,sets:'',groupId:'g'},{groups:[{id:'g',rounds:4}]}),4);assert.equal(workingSets({...ex,sets:3,groupId:'g'},{groups:[{id:'g',rounds:4}]}),3);
+assert.equal(normalizeMuscleRoles({muscles:['Nogi']}),null);
+assert.equal(get('quads',anatomyCoverage({...props,targets:{quads:0}})).status,'excluded');
+const unknown=anatomyCoverage({...props,workouts:[...props.workouts,{id:'b',date:'2026-10-01',status:'completed',exercises:[{...ex,muscleRoles:undefined,muscles:['Nogi']}]}]});
+assert.equal(get('quads',unknown).completedUnknown,true);assert.equal(get('quads',unknown).status,'unknown');assert.equal(get('quads',unknown).completedSets,3);
+const root=new URL('../',import.meta.url);
+const html=`<!doctype html><html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/anatomy-ui.css"><style>body{margin:0;background:#f7f8f2}main{max-width:420px;margin:auto;padding:16px}.anatomy-card{margin:0}</style><main></main><script type="module">import {renderAnatomy,mountAnatomy} from '/anatomy-ui.js';const props=${JSON.stringify(props)};document.querySelector('main').innerHTML=renderAnatomy(props);window.dispose=mountAnatomy(document.querySelector('main'),props);</script></html>`;
+const server=createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost');if(url.pathname==='/'){res.setHeader('Content-Type','text/html; charset=utf-8');return res.end(html)}if(!/^\/[\w./-]+$/.test(url.pathname)||url.pathname.includes('..')){res.writeHead(404);return res.end()}const path=new URL(url.pathname.slice(1),root);res.setHeader('Content-Type',path.pathname.endsWith('.js')?'text/javascript':path.pathname.endsWith('.css')?'text/css':'text/plain');res.end(await readFile(path))}catch{res.writeHead(404);res.end()}});
+await new Promise(resolve=>server.listen(4194,'127.0.0.1',resolve));
+const browser=await chromium.launch({channel:'chrome',headless:true}),page=await browser.newPage({viewport:{width:360,height:900}}),errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+try{
+ await page.goto('http://127.0.0.1:4194');await expect(page.locator('.anatomy-has-webgl')).toBeVisible();
+ await page.screenshot({path:fileURLToPath(new URL('qa-front.png',import.meta.url)),fullPage:true});
+ const canvas=await page.locator('canvas').boundingBox();await page.mouse.click(canvas.x+canvas.width/2+.4*canvas.height/8.26,canvas.y+(7.98-5.98)*canvas.height/8.26);await expect(page.locator('#anatomy-detail-title')).toHaveText('Klatka piersiowa');await page.keyboard.press('Escape');
+ await page.locator('[data-anatomy-help]').click();await expect(page.locator('#anatomy-detail-title')).toHaveText('Jak czytać mapę');await page.keyboard.press('Escape');await expect(page.locator('[data-anatomy-help]')).toBeFocused();
+ await page.locator('[data-anatomy-view="back"]').click();await page.screenshot({path:fileURLToPath(new URL('qa-back.png',import.meta.url)),fullPage:true});
+ await page.locator('button[data-anatomy-muscle="glutes"]').click();await expect(page.locator('dialog')).toBeVisible();await expect(page.locator('dialog')).toContainText('150%');await page.keyboard.press('Escape');await expect(page.locator('dialog')).not.toBeVisible();await expect(page.locator('button[data-anatomy-muscle="glutes"]')).toBeFocused();
+ await page.locator('[data-anatomy-mode-select="planned"]').click();await expect(page.locator('button[data-anatomy-muscle="quads"]')).toContainText('100%');
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.evaluate(()=>document.documentElement.style.fontSize='200%');await page.screenshot({path:fileURLToPath(new URL('qa-200.png',import.meta.url)),fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.evaluate(()=>window.dispose());assert.equal(await page.locator('canvas').count(),0);assert.deepEqual(errors,[]);
+ const fallback=await browser.newPage({viewport:{width:360,height:900}});await fallback.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return type.includes('webgl')?null:original.call(this,type,...args)}});await fallback.goto('http://127.0.0.1:4194');await expect(fallback.locator('.anatomy-fallback')).toBeVisible();await fallback.locator('button[data-anatomy-muscle="quads"]').click();await expect(fallback.locator('dialog')).toBeVisible();await fallback.keyboard.press('Escape');await fallback.screenshot({path:fileURLToPath(new URL('qa-fallback.png',import.meta.url)),fullPage:true});
+ console.log('Anatomy: calculation edge cases, WebGL, front/back, mode switch, dialogs, focus return, 360px, 200% text, disposal, and no-WebGL fallback passed.');
+}finally{await browser.close();server.close()}

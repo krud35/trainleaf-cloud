@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#F7F8F2" />
+    <script id="trainleaf-appearance-bootstrap">
+      // Apply the saved appearance before CSS, application code or the database loads.
+      (() => {
+        let preference = 'system';
+        try { preference = localStorage.getItem('trainleaf-theme') || 'system'; } catch { /* Keep the system preference when storage is unavailable. */ }
+        const dark = preference === 'dark' || preference !== 'light' && !!window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#17251C' : '#F7F8F2';
+        // English unless a supported language was saved; the device language is deliberately ignored.
+        let language = 'en';
+        try { const saved = localStorage.getItem('trainleaf-language'); if (saved === 'pl' || saved === 'fr' || saved === 'es') language = saved; } catch { /* Keep English when storage is unavailable. */ }
+        document.documentElement.lang = language;
+      })();
+    </script>
+    <style>html { background: #E9EDE3; color: #203B2C; } html[data-theme="dark"] { background: #101B14; color: #E2EBDD; }</style>
+    <meta name="description" content="Your local training journal. Choose your sports and record your progress." />
+    <title>Trainleaf — training journal</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

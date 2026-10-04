@@ -1,0 +1,62 @@
+/* Scoped exercise and unlimited superset composition. Leaf illustrations stay untouched. */
+.exercise-composer{margin:28px 0 18px;min-width:0}
+.exercise-composer *{min-width:0}
+.exercise-composer .ex-composer-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid #C8D5BE;padding-bottom:13px;margin-bottom:18px}
+.exercise-composer .ex-composer-heading h2{margin:0;display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;font-size:1rem}
+.exercise-composer .ex-composer-heading small{font-weight:400}
+.exercise-composer .ex-button{font-size:.78rem;min-height:44px;padding:10px 11px;border-radius:8px;white-space:normal;overflow-wrap:anywhere}
+.exercise-composer .ex-button svg{width:17px;height:17px;margin-right:5px}
+.exercise-composer .ex-button:disabled{cursor:default;color:#66755F;background:#EDF0E8;border-color:#D7DDD2;opacity:1}
+.exercise-composer .ex-button:disabled:active{transform:none}
+.exercise-composer .ex-item{background:#FDFFF8;border:1px solid #CCD8C3;border-left:3px solid #A2B98B;border-radius:4px 14px 14px 4px;padding:15px;margin:14px 0}
+.exercise-composer .ex-item-heading{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding-bottom:12px}
+.exercise-composer .ex-item-heading h3{font-size:1rem;font-weight:600;line-height:1.42;overflow-wrap:anywhere}
+.exercise-composer .ex-number{background:#E7EFDA;color:#345430;min-width:30px;min-height:30px;border-radius:5px 11px 5px 5px;display:grid;place-items:center;font-size:.8rem;font-weight:650;padding:4px}
+.exercise-composer .ex-item-heading .ex-remove{grid-column:2;justify-self:start;font-size:.72rem;min-height:44px;color:#655448;border-color:transparent;padding:4px 0;margin-top:-7px}
+.exercise-composer .ex-meta{font-size:.72rem;color:#53654B;margin:3px 0 0}
+.exercise-composer .ex-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+.exercise-composer .ex-field{display:flex;flex-direction:column;gap:7px;font-size:.78rem;color:#3C543B;line-height:1.4;margin:0}
+.exercise-composer .ex-field-label{display:flex;align-items:center;justify-content:space-between;gap:5px;flex:1}
+.exercise-composer .ex-field input,.exercise-composer .ex-field select,.exercise-composer .ex-field textarea{width:100%;max-width:100%;font-size:1rem;padding:11px 10px;min-height:48px;background:#FEFFF9;border:1px solid #95AA87;border-radius:7px;margin:0;box-sizing:border-box}
+.exercise-composer .ex-field textarea{resize:vertical;line-height:1.5}
+.exercise-composer .ex-field .help-button{flex-shrink:0}
+.exercise-composer .ex-preserved{font-size:.75rem;background:#F1F1E6;border-radius:5px;padding:10px 12px;color:#4E583D;margin:14px 0}
+.exercise-composer .ex-preserved span{display:block;font-size:.68rem;margin-top:3px}
+.exercise-composer .ex-details{border:0;border-top:1px solid #D4DDCB;border-radius:0;margin:15px 0 0;padding:0}
+.exercise-composer .ex-details summary{min-height:48px;padding:12px 0;line-height:1.4;font-size:.78rem;color:#375B3B;font-weight:500;cursor:pointer}
+.exercise-composer .ex-details summary:focus-visible{outline:3px solid #58754A;outline-offset:3px}
+.exercise-composer .ex-details[open] summary{margin-bottom:8px}
+.exercise-composer .ex-details .ex-instructions{font-size:.82rem;line-height:1.55}
+.exercise-composer .ex-inline-note{font-size:.75rem;line-height:1.5;color:#516449;grid-column:1/-1;margin:8px 0 12px}
+.exercise-composer .ex-empty{font-size:.85rem;line-height:1.6;color:#516449;padding:18px 0;margin:0}
+.exercise-composer .ex-feedback{font-size:.78rem;color:#2F583C;line-height:1.5;margin:10px 0}
+.exercise-composer .ex-feedback:empty{display:none}
+.exercise-composer .ex-selection-bar{background:#E5EDD9;border:1px solid #9DB38D;padding:14px;border-radius:6px 18px 6px 6px;margin:14px 0}
+.exercise-composer .ex-selection-bar p,.exercise-composer .ex-selection-bar>span{font-size:.8rem;color:#35552F;line-height:1.5}
+.exercise-composer .ex-selection-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.exercise-composer .ex-select{display:flex;align-items:center;gap:10px;font-size:.8rem;min-height:48px;padding:8px;background:#EDF3E6;border-radius:6px;margin-bottom:12px;color:#345132;cursor:pointer}
+.exercise-composer .ex-select input{width:22px;height:22px;min-width:22px;flex:0 0 22px;margin:0;padding:0}
+.exercise-composer .ex-group{border:1px solid #95AD83;border-radius:7px 24px 7px 7px;background:#EAF0E0;padding:15px;margin:20px 0}
+.exercise-composer .ex-group-heading{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.exercise-composer .ex-group-heading h3{font:400 1.35rem/1.25 var(--serif,Georgia,serif);color:#2F4E2B;margin:5px 0 0;letter-spacing:-.025em}
+.exercise-composer .ex-group-kicker{font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:#48663C}
+.exercise-composer .ex-group-intro{font-size:.78rem;color:#475D3D;line-height:1.55;margin:14px 0}
+.exercise-composer .ex-member{margin:12px 0;border-left:2px solid #93AC80;border-radius:4px 10px 10px 4px;padding:12px}
+.exercise-composer .ex-member .ex-item-heading{column-gap:8px}
+.exercise-composer .ex-member .ex-number{background:#E1EBCF}
+.exercise-composer .ex-member-actions{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0 0;border-top:1px solid #D1DCC5;padding-top:12px}
+.exercise-composer .ex-member-actions .ex-button{flex:1 1 auto;padding-inline:8px;font-size:.72rem}
+.exercise-composer .ex-group-rest{border-top:1px solid #BFCEAF;padding-top:12px;margin-top:18px}
+.exercise-composer .ex-group-rest>p{font-size:.85rem;font-weight:600;color:#35542D;margin:0}
+.exercise-composer .ex-group-rest small,.exercise-composer .ex-group-explanation{display:block;font-size:.7rem;line-height:1.55;color:#4A613F}
+.exercise-composer .ex-append{margin-top:18px;border-top:1px solid #BFCEAF;padding-top:15px}
+.exercise-composer .ex-append .ex-button{width:100%;margin-top:10px;background:#F9FCF3}
+.exercise-composer .ex-ungroup{width:100%;margin:14px 0 8px;border-color:#9FB28C}
+.large .exercise-composer .ex-fields{grid-template-columns:minmax(0,1fr)}
+.large .exercise-composer .ex-item,.large .exercise-composer .ex-group{padding:12px}
+.large .exercise-composer .ex-member{padding:10px}
+.large .exercise-composer .ex-item-heading{grid-template-columns:minmax(0,1fr)}
+.large .exercise-composer .ex-item-heading .ex-remove{grid-column:1}
+.large .exercise-composer .ex-number{justify-self:start}
+.large .exercise-composer .ex-member-actions{flex-direction:column}
+@media(max-width:380px){.exercise-composer .ex-member .ex-fields{grid-template-columns:minmax(0,1fr)}.exercise-composer .ex-group-rest .ex-fields{grid-template-columns:minmax(0,1fr)}}

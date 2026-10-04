@@ -1,0 +1,25 @@
+.more-hub { min-width: 0; position: relative; }
+.more-hub .page-heading { margin-bottom: 28px; }
+.more-hub .intro { margin-top: 12px; }
+.more-section-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin: 24px 0 10px; }
+.more-section-heading h2 { font-size: .95rem; }
+.more-section-heading > button { display: inline-flex; align-items: center; gap: 8px; padding-right: 0; min-height: 48px; font-size: .83rem; }
+.more-tools { border-top: 1px solid var(--line, #D8DFD1); }
+.more-hub .more-tool-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) 15px; gap: 10px; align-items: center; width: 100%; padding: 19px 0; border: 0; border-bottom: 1px solid var(--line, #D8DFD1); border-radius: 0; background: transparent; text-align: left; min-height: 74px; }
+.more-hub .more-tool-row:hover { background: #EDF2E6; }
+.more-leaf-symbol { width: 36px; height: 40px; display: grid; place-items: center; border-radius: 25px 4px 25px 4px; background: #E2ECD5; color: #416139; }
+.more-tool-row:nth-child(2) .more-leaf-symbol { background: #E6EDD4; }
+.more-tool-row:nth-child(3) .more-leaf-symbol { background: #EEE5C9; }
+.more-tool-copy { min-width: 0; }
+.more-tool-copy strong { display: block; font-size: .92rem; font-weight: 500; color: #294B34; line-height: 1.45; overflow-wrap: anywhere; }
+.more-tool-copy small { display: block; margin-top: 5px; font-size: .75rem; color: #4D6347; line-height: 1.5; overflow-wrap: anywhere; }
+.more-chevron { color: #557049; }
+.more-empty { padding: 20px 0; color: #4D6347; font-size: .88rem; }
+.more-all { border: 1px solid #C7D5BB; border-radius: 14px; background: #F1F5EB; margin: 24px 0; padding: 0 16px; min-width: 0; }
+.more-all > summary { min-height: 56px; cursor: pointer; padding: 15px 0; font-size: .88rem; color: #365332; overflow-wrap: anywhere; }
+.more-all > summary > span { margin-left: 8px; font-size: .8rem; color: #4D6347; }
+.more-all .more-tool-row { padding: 14px 0; min-height: 56px; }
+.more-all .more-tool-row:last-child { border-bottom: 0; }
+.more-all .more-leaf-symbol { background: transparent; }
+.more-hub .more-settings { border-top: 1px solid var(--line, #D8DFD1); }
+@media(max-width: 340px) { .more-hub .more-tool-row { gap: 10px; } }

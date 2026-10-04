@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Trainleaf</string>
+    <string name="title_activity_main">Trainleaf</string>
+    <string name="package_name">com.frisbeeprep.app</string>
+    <string name="custom_url_scheme">com.frisbeeprep.app</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Only explicitly exported files can be shared; never the database itself. -->
+    <cache-path name="manual_exports" path="exports/" />
+</paths>

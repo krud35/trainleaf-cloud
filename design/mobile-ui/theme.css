@@ -1,0 +1,270 @@
+/* Appearance is resolved before paint by appearance-bootstrap.js.
+   This last stylesheet changes colors only; the botanical geometry stays shared. */
+:root {
+  --page:#E9EDE3;--paper:#F7F8F2;--ink:#203B2C;--muted:#58685D;
+  --accent:#2F6048;--focus:#58754A;--line:#D7DED1;
+  --type-strength-ink:#674333;--type-strength-paper:#F1DFD2;
+  --type-running-ink:#35583D;--type-running-paper:#DDEBD9;
+  --type-endurance-ink:#345C68;--type-endurance-paper:#DCEBF0;
+  --type-technique-ink:#665027;--type-technique-paper:#F1E8CB;
+  --type-team-ink:#51476F;--type-team-paper:#E8E2F1;
+  --type-mental-ink:#6B445A;--type-mental-paper:#F0DFE9;
+  --anatomy-unknown:#aeb6a8;--anatomy-progress-low:#bc6b59;
+  --anatomy-progress-mid1:#c68a4e;--anatomy-progress-mid2:#b4aa56;--anatomy-progress-met:#41865b;
+  --anatomy-shade-start:#858e80;--anatomy-shade-light:#e0e2d7;
+  --anatomy-shade-mid:#c1c8b8;--anatomy-shade-end:#798371;
+  --anatomy-specular:#fff;--anatomy-accessory:#b8bbae;--anatomy-outline:#6c7767;
+}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark] {
+  color-scheme:dark;background:#101A15;color:#E4EBDE;
+  --page:#101A15;--paper:#17231C;--surface:#1D2B22;--surface-raised:#24342A;
+  --surface-hover:#2A3B2F;--surface-soft:#1A281F;--form:#122019;
+  --ink:#E4EBDE;--muted:#AFBDAA;--accent:#A2C78E;--accent-fill:#A2C78E;
+  --on-accent:#142A1B;--focus:#C1DEA7;--line:#3A4C3D;--line-strong:#7C936E;
+  --sage:#2C402C;--sand:#433922;--blue:#263C38;--leaf:#9ABD7E;--success:#B1D19D;
+  --warm-paper:#342D21;--warm-ink:#E4C99F;--warm-line:#756447;
+  --track:#40523B;--chart:#AAC893;--chart-strong:#C2DCAF;
+  --error-paper:#3D2823;--error-ink:#F0B4A0;--error-line:#A87360;
+  --disabled-paper:#223027;--disabled-ink:#94A18E;
+  --type-strength-ink:#E4BA9E;--type-strength-paper:#3A2D25;
+  --type-running-ink:#B1D39F;--type-running-paper:#283B27;
+  --type-endurance-ink:#A7D0D9;--type-endurance-paper:#223840;
+  --type-technique-ink:#E1CF91;--type-technique-paper:#3A3522;
+  --type-team-ink:#C9B9E5;--type-team-paper:#322C40;
+  --type-mental-ink:#E0B4CB;--type-mental-paper:#3D2935;
+  --anatomy-unknown:#85988a;--anatomy-progress-low:#d99380;
+  --anatomy-progress-mid1:#d8b077;--anatomy-progress-mid2:#c5bf7c;--anatomy-progress-met:#78b38e;
+  --anatomy-shade-start:#536758;--anatomy-shade-light:#AABBA6;
+  --anatomy-shade-mid:#859B80;--anatomy-shade-end:#4E6652;
+  --anatomy-specular:#dce9d5;--anatomy-accessory:#85988a;--anatomy-outline:#B2C3A8;
+}
+/* Shared frame, navigation, and native controls. */
+[data-theme=dark] body{background:var(--page);color:var(--ink)}
+[data-theme=dark] .shell{background:var(--paper);border-color:var(--line);box-shadow:0 14px 60px #050C0740}
+[data-theme=dark] .shell nav{background:#17231CF5;border-color:var(--line)}
+[data-theme=dark] .shell nav button{color:var(--muted)}
+[data-theme=dark] .shell nav button[aria-current=page]{color:var(--accent)}
+[data-theme=dark] .shell nav button[aria-current=page] .nav-icon{background:var(--surface-raised)}
+[data-theme=dark] .shell nav button:not([aria-current]):hover{background:var(--surface)}
+[data-theme=dark] button:hover{background-color:var(--surface-hover);border-color:var(--line-strong)}
+[data-theme=dark] :is(.primary,.checkin-card .primary,.plan-create button.primary){background:var(--accent-fill);color:var(--on-accent);border-color:var(--accent-fill)}
+[data-theme=dark] :is(.primary,.checkin-card .primary,.plan-create button.primary):hover{background:#B4D59D;border-color:#B4D59D}
+[data-theme=dark] :is(.subtle,.history-link,.feeling-footer .subtle){color:var(--accent)}
+[data-theme=dark] :is(button,a,summary,input,select,textarea):focus-visible{outline-color:var(--focus)}
+[data-theme=dark] .icon-button:hover{background:var(--surface-raised)}
+[data-theme=dark] .header-actions [data-go=settings] circle{fill:var(--paper)}
+[data-theme=dark] :is(button:disabled,.exercise-composer .ex-button:disabled){background:var(--disabled-paper);color:var(--disabled-ink);border-color:var(--line);opacity:1}
+[data-theme=dark] :is(input:not([type=checkbox]):not([type=range]),select,textarea){background:var(--form);color:var(--ink);border-color:var(--line-strong)}
+[data-theme=dark] :is(input,select,textarea):focus{border-color:var(--focus)}
+[data-theme=dark] :is(input,textarea)::placeholder{color:#A3B19A}
+[data-theme=dark] :is(input[type=checkbox],input[type=radio]){accent-color:var(--accent)}
+[data-theme=dark] :is(input,select,textarea):disabled{background:var(--disabled-paper);color:var(--disabled-ink);border-color:var(--line)}
+[data-theme=dark] select option{background:var(--form);color:var(--ink)}
+[data-theme=dark] input::-webkit-calendar-picker-indicator{opacity:.8}
+[data-theme=dark] label.field{color:#CCDAC2}
+[data-theme=dark] :is(.choice,.sport-picker .sport-option,.module-picker .module-option):has(input:checked){background:var(--surface-raised)}
+[data-theme=dark] #workout input[name=title]{background:transparent;border-color:var(--line-strong)}
+[data-theme=dark] #workout textarea{border-left-color:var(--line-strong)}
+[data-theme=dark] .review{color:var(--muted)}
+[data-theme=dark] .review-heading b{color:var(--ink)}
+[data-theme=dark] .review-heading b span{color:var(--accent)}
+[data-theme=dark] .review-options{background:var(--surface-raised);box-shadow:0 10px 35px #0006}
+[data-theme=dark] :is(.help-dialog,.appearance-dialog,.anatomy-dialog){background:var(--surface);color:var(--ink);border-color:var(--line-strong);box-shadow:0 25px 100px #0006}
+[data-theme=dark] :is(.help-dialog,.appearance-dialog,.anatomy-dialog)::backdrop{background:#060E0BB3}
+[data-theme=dark] button.help-trigger{color:var(--accent)}
+[data-theme=dark] button.help-trigger:before{border-color:var(--line-strong)}
+/* Paper layers, quiet metadata, and meaningful feedback. */
+[data-theme=dark] :is(.card,.today-add,.today-session){background:var(--surface);border-color:var(--line)}
+[data-theme=dark] :is(.card-button,.history-row,.more-hub .more-shortcut,.today-add,.today-session):hover{background:var(--surface-hover)}
+[data-theme=dark] :is(.tag,.tag.plan){background:var(--surface-raised);color:#CADFB9;border-color:var(--line-strong)}
+[data-theme=dark] #workout .tag{background:var(--surface-raised)!important;color:#CADFB9!important}
+[data-theme=dark] main[data-view=editor] .tag{background:var(--surface-raised);color:var(--muted)}
+[data-theme=dark] :is(.notice,.load-summary){background:#263B29;color:#D0E4BF;border-color:#68835A}
+[data-theme=dark] .error{background:var(--error-paper);color:var(--error-ink);border-color:var(--error-line)}
+[data-theme=dark] :is(input,select,textarea)[aria-invalid=true]{border-color:var(--error-line)}
+[data-theme=dark] :is(.empty,.planned-expectations,.history-completeness,.session-after){background:var(--surface);border-color:var(--line-strong)}
+[data-theme=dark] .empty-mark{color:var(--accent)}
+[data-theme=dark] .empty p{color:var(--muted)}
+[data-theme=dark] :is(.session-topline,.session-note,.session-duration,.session-open,.history-sport,.history-meta,.history-note,.local-footnote,.checkin-done small,.exercise-row small,.period-list-row>span,.auto-period small,.auto-period p,.form-aside,.survey-summary dt,.pending-metric p,.load-summary p,.archive-count,.activity-month small,.context-crumb,.session-facts dt,.session-exercise-section small,.session-period-context span,.event-form-intro,.goal-form-intro,.field-hint){color:var(--muted)}
+[data-theme=dark] :is(.history-note,.session-bottom,.checkin-done,.stats-pair,.session-card-note){border-color:var(--line)}
+[data-theme=dark] :is(.wellness-link>svg,.history-row>svg,.checkin-done>svg,.exercise-row>svg){color:#9CAF91}
+[data-theme=dark] :is(.wellness-symbol,.session-notebook){background:var(--warm-paper);color:var(--warm-ink);border-color:var(--warm-line)}
+[data-theme=dark] :is(.checkin-check,.exercise-symbol){background:#2B402A;color:var(--accent)}
+[data-theme=dark] .exercise-row:nth-child(3n+2) .exercise-symbol{background:#343923;color:#C8CF96}
+[data-theme=dark] .exercise-row:nth-child(3n) .exercise-symbol{background:var(--warm-paper);color:var(--warm-ink)}
+[data-theme=dark] main[data-view=templates] .card{background:#243831}
+[data-theme=dark] main[data-view=templates] .card:nth-of-type(2){background:var(--warm-paper)}
+[data-theme=dark] .session-exercise-section h3{color:var(--accent)}
+[data-theme=dark] .session-exercise-section li::marker{color:var(--accent)}
+/* Actual leaf SVG surfaces have their own night palette. */
+[data-theme=dark] :is(.checkin-card,.context-feature,.period-card){--blade:#31432B;--leaf-ink:#9DB980;--leaf-wash:#ABC581;color:#D8E9C5;background:transparent}
+[data-theme=dark] .checkin-card{--blade:#35482D;--leaf-ink:#A4BF83;--leaf-wash:#B9D196}
+[data-theme=dark] :is(.goal-feature,.goal-card){--blade:#473B27;--leaf-ink:#C2A773;--leaf-wash:#DCC18D;color:#F0D8A9}
+[data-theme=dark] :is(.checkin-intro .eyebrow,.checkin-optional,.checkin-card p){color:#CFDDBB}
+[data-theme=dark] .checkin-card h2{color:#EBF2DA}
+[data-theme=dark] :is(.period-card:not(.goal-card) .eyebrow,.period-card:not(.goal-card) p,.period-card .period-dates){color:#D2E3BC}
+[data-theme=dark] .goal-card .period-dates{color:#EEDBB7}
+[data-theme=dark] .goal-card>p{color:#F0D8A9}
+[data-theme=dark] :is(.context-feature,.period-card):hover{background:transparent}
+[data-theme=dark] :is(.context-feature,.period-card):hover .leaf-blade{fill:color-mix(in srgb,var(--blade),var(--leaf-wash) 10%)}
+[data-theme=dark] .phase-chip{background:#17271DAA;color:#D3E5BB;border-color:#819A64}
+[data-theme=dark] .month-stamp:before{background:var(--leaf)}
+[data-theme=dark] .period-rule{background:var(--track)}
+[data-theme=dark] .period-rule span{background:var(--accent)}
+/* Training colors are inherited by badges, calendar tiles, and session heroes. */
+[data-theme=dark] .session-card{background:var(--session-paper,var(--surface));border-color:color-mix(in srgb,var(--session-ink,var(--accent)) 38%,transparent);border-left-color:var(--session-ink,var(--accent))}
+[data-theme=dark] .session-card:hover{background:color-mix(in srgb,var(--session-paper,var(--surface)),white 4%);filter:none}
+[data-theme=dark] :is(.session-state,.session-card-meta,.session-card-sport,.session-card-note){color:var(--muted)}
+[data-theme=dark] .session-card-link{color:var(--session-ink,var(--accent))}
+[data-theme=dark] .session-detail-hero small{color:inherit}
+/* Calendar: selected days, quiet empty days, and warm event ribbons. */
+[data-theme=dark] :is(.week-board,.plan-calendar){color:var(--ink)}
+[data-theme=dark] :is(.week-board .week-board__shift,.plan-month__heading>button:not(.help-trigger)){background:var(--surface-raised);color:var(--accent)}
+[data-theme=dark] :is(.week-board__scroll,.plan-month__scroll,.plan-timeline){scrollbar-color:var(--line-strong) var(--surface-soft);border-color:var(--line)}
+[data-theme=dark] :is(.week-column,.plan-month__day){background:var(--surface-soft)}
+[data-theme=dark] .week-column.is-selected{background:#30432B;box-shadow:inset 0 0 0 1px #819B68}
+[data-theme=dark] .plan-month__day.is-selected{background:#30432B;border-color:#819B68}
+[data-theme=dark] .plan-month__day.is-outside{background:#142019;color:#95A38F}
+[data-theme=dark] :is(.week-board .week-column__day,.week-column__day>strong,.plan-month__day>button){color:var(--ink)}
+[data-theme=dark] .week-column__day>i{background:var(--accent)}
+[data-theme=dark] .plan-heading__leaf path[fill]:not([fill=none]){fill:#31432B}
+[data-theme=dark] .plan-heading__leaf path[stroke]{stroke:#9DB980}
+[data-theme=dark] .plan-month__day>button[aria-current=date]{background:var(--accent);color:var(--on-accent)}
+[data-theme=dark] :is(.week-board .week-mini,.plan-calendar .week-mini){border-color:color-mix(in srgb,var(--week-type-ink) 45%,var(--week-type-paper));background:var(--week-type-paper);color:var(--week-type-ink)}
+[data-theme=dark] :is(.week-board .week-session,.plan-calendar .week-session){background:var(--week-type-paper);color:var(--ink);border-color:color-mix(in srgb,var(--week-type-ink) 45%,var(--week-type-paper));border-left-color:var(--week-type-ink)}
+[data-theme=dark] :is(.week-session__meta,.week-column__empty,.calendar-energy,.week-board__footer>span,.week-list-empty,.week-day-detail__empty,.calendar-energy-caption,.plan-month__weekday,.plan-breadcrumbs,.plan-timeline__months>span,.plan-season__title p,.plan-season__period>button>small){color:var(--muted)}
+[data-theme=dark] :is(.week-column__energy,.week-board__list>div>section,.plan-filters,.plan-month__list,.plan-season__list,.plan-month__list-day,.plan-season__period,.plan-timeline__months){border-color:var(--line)}
+[data-theme=dark] :is(.week-board__list>summary,.calendar-energy-caption .calendar-energy-action,.plan-breadcrumbs button,.plan-breadcrumbs button[aria-current=page],.plan-filters>summary,.plan-month__list>summary,.plan-season__list>summary,.plan-season__title>button){color:var(--accent)}
+[data-theme=dark] .calendar-energy--unknown{color:var(--muted)}
+[data-theme=dark] .calendar-energy--low-confidence{color:var(--warm-ink)}
+[data-theme=dark] .calendar-energy--forecast{color:var(--accent)}
+[data-theme=dark] .calendar-energy__track{background:var(--track)}
+[data-theme=dark] .calendar-energy__track>span{background:var(--chart)}
+[data-theme=dark] :is(.calendar-energy--unknown,.calendar-energy--low-confidence) .calendar-energy__track{background:repeating-linear-gradient(135deg,#34442E 0,#34442E 3px,#6A7D5C 3px,#6A7D5C 4px)}
+[data-theme=dark] .calendar-energy--reference .calendar-energy__track{background:var(--track)}
+[data-theme=dark] .calendar-energy--low-confidence .calendar-energy__track>span{background:repeating-linear-gradient(135deg,#A5BC89 0,#A5BC89 3px,#CEDDB4 3px,#CEDDB4 4px)}
+[data-theme=dark] :is(.calendar-event,.plan-timeline .plan-timeline__bar.calendar-event){background:var(--warm-paper);color:var(--warm-ink);border-color:var(--warm-line)}
+[data-theme=dark] :is(.calendar-event--multi,.plan-timeline .plan-timeline__bar.calendar-event--multi){background:repeating-linear-gradient(135deg,#3D3324 0,#3D3324 6px,#4A3E2C 6px,#4A3E2C 12px);border-color:var(--warm-line)}
+[data-theme=dark] :is(.week-board button,.plan-calendar button):hover{filter:none}
+[data-theme=dark] :is(.week-board button,.plan-calendar button,.week-board__scroll):focus-visible{outline-color:var(--focus)}
+[data-theme=dark] .plan-modes{background:var(--surface-soft);border-color:var(--line)}
+[data-theme=dark] .plan-modes button{color:var(--muted)}
+[data-theme=dark] .plan-modes button[aria-pressed=true]{background:var(--accent);color:var(--on-accent);box-shadow:0 2px 4px #0003}
+[data-theme=dark] .plan-create button{background:var(--surface-raised);border-color:var(--line-strong)}
+[data-theme=dark] .plan-filters :is(input,select){background:var(--form);border-color:var(--line-strong)}
+[data-theme=dark] :is(.plan-season__choices button,.plan-season__weeks button){background:var(--surface);color:var(--muted);border-color:var(--line-strong)}
+[data-theme=dark] :is(.plan-season__choices button[aria-pressed=true],.plan-season__weeks button[aria-current=date]){background:#30432B;color:#DBEACB;border-color:#819B68}
+[data-theme=dark] .plan-season__title h2{color:var(--ink)}
+[data-theme=dark] .plan-timeline__canvas{background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),var(--line) calc(25% - 1px),var(--line) 25%);border-color:var(--line)}
+[data-theme=dark] .plan-timeline .plan-timeline__bar{background:#2F422A;color:#D5E5BD;border-color:#819A64}
+[data-theme=dark] .plan-timeline__row.is-season .plan-timeline__bar{background:#A2BD7F;color:#1A2D19;border-color:#A2BD7F}
+[data-theme=dark] .plan-season__empty{background:var(--surface);color:var(--ink);border-color:var(--line-strong)}
+[data-theme=dark] .week button{color:var(--muted)}
+[data-theme=dark] .week button.selected{background:var(--accent);color:var(--on-accent)}
+[data-theme=dark] .week button:not(.selected):hover{background:var(--surface-raised)}
+[data-theme=dark] .week i{background:var(--accent)}
+[data-theme=dark] .week .selected i{background:var(--on-accent)}
+[data-theme=dark] :is(.segmented,.muscle-plan){background:var(--surface);border-color:var(--line);color:var(--ink)}
+[data-theme=dark] .segmented button{color:var(--muted)}
+[data-theme=dark] .segmented button.primary{background:var(--surface-raised);color:var(--ink)}
+[data-theme=dark] :is(.muscle-plan__heading>svg,.muscle-plan__heading>h2){color:var(--accent)}
+[data-theme=dark] :is(.muscle-plan__source,.muscle-plan__note,.muscle-plan__missing,.muscle-plan__groups li>div>strong,.muscle-plan__empty>p){color:var(--muted)}
+[data-theme=dark] :is(.muscle-plan__missing,.muscle-plan__empty){border-color:var(--line)}
+[data-theme=dark] .muscle-plan__track{background:var(--track)}
+[data-theme=dark] .muscle-plan__track>span{background:var(--chart)}
+/* Profile and settings retain their familiar hierarchy. */
+[data-theme=dark] :is(.more-hub .more-shortcut strong,.more-hub .more-settings strong,.sport-picker .sport-group summary,.sport-picker .sport-option,.sport-picker .sport-custom-entry h2,.module-picker .module-option strong){color:var(--ink)}
+[data-theme=dark] :is(.more-hub .more-shortcut small,.more-hub .more-settings small,.more-hub .more-empty,.more-hub .more-all summary>span,.sport-picker .sport-group-count,.sport-picker .sport-custom-empty,.sport-picker .sport-no-results,.sport-picker .sport-hint,.sport-picker .sport-save-note,.module-picker .module-help,.module-picker .module-option small){color:var(--muted)}
+[data-theme=dark] :is(.more-hub .more-symbol,.more-hub .more-shortcut:nth-child(2) .more-symbol){background:#2B402A;color:var(--accent)}
+[data-theme=dark] .more-hub .more-shortcut:nth-child(3) .more-symbol{background:var(--warm-paper);color:var(--warm-ink)}
+[data-theme=dark] :is(.more-hub .more-shortcut>svg,.more-hub .more-settings>svg,.more-hub .more-all summary,.sport-picker .sport-selection-status){color:var(--accent)}
+[data-theme=dark] .more-hub .more-all{background:var(--surface-soft);border-color:var(--line)}
+[data-theme=dark] .more-hub .more-shortcut-compact .more-symbol{background:transparent}
+[data-theme=dark] .sport-picker .sport-custom-entry{background:var(--surface);border-color:var(--line)}
+[data-theme=dark] .sport-picker .sport-add{background:var(--surface-raised);color:var(--accent);border-color:var(--line-strong)}
+[data-theme=dark] :is(.sport-picker,.module-picker) input[type=checkbox]{accent-color:var(--accent)}
+/* Exercise composer: inset fields, elevated groups, preserved source notes. */
+[data-theme=dark] :is(.exercise-composer .ex-composer-heading,.exercise-composer .ex-details,.exercise-composer .ex-member-actions,.exercise-composer .ex-group-rest,.exercise-composer .ex-append){border-color:var(--line)}
+[data-theme=dark] .exercise-composer .ex-item{background:var(--surface);border-color:var(--line);border-left-color:var(--line-strong)}
+[data-theme=dark] :is(.exercise-composer .ex-number,.exercise-composer .ex-member .ex-number){background:#34482C;color:#D2E4BA}
+[data-theme=dark] .exercise-composer .ex-item-heading .ex-remove{color:var(--warm-ink)}
+[data-theme=dark] :is(.exercise-composer .ex-meta,.exercise-composer .ex-inline-note,.exercise-composer .ex-empty,.exercise-composer .ex-group-intro,.exercise-composer .ex-group-rest small,.exercise-composer .ex-group-explanation){color:var(--muted)}
+[data-theme=dark] .exercise-composer .ex-field{color:#CCDAC2}
+[data-theme=dark] .exercise-composer .ex-field :is(input,select,textarea){background:var(--form);color:var(--ink);border-color:var(--line-strong)}
+[data-theme=dark] .exercise-composer .ex-preserved{background:var(--warm-paper);color:var(--warm-ink)}
+[data-theme=dark] :is(.exercise-composer .ex-details summary,.exercise-composer .ex-feedback,.exercise-composer .ex-group-kicker){color:var(--accent)}
+[data-theme=dark] .exercise-composer .ex-selection-bar{background:#2E422A;border-color:#819A64}
+[data-theme=dark] :is(.exercise-composer .ex-selection-bar p,.exercise-composer .ex-selection-bar>span){color:#D7E7C2}
+[data-theme=dark] .exercise-composer .ex-select{background:var(--surface-raised);color:var(--ink)}
+[data-theme=dark] .exercise-composer .ex-group{background:#243421;border-color:#718A5D}
+[data-theme=dark] :is(.exercise-composer .ex-group-heading h3,.exercise-composer .ex-group-rest>p){color:#D7E7C2}
+[data-theme=dark] .exercise-composer .ex-member{border-left-color:#819A64}
+[data-theme=dark] .exercise-composer .ex-append .ex-button{background:var(--surface-raised)}
+[data-theme=dark] .exercise-composer .ex-ungroup{border-color:var(--line-strong)}
+/* Survey sliders use separate track and thumb colors in both browser engines. */
+[data-theme=dark] .feeling{--slider-color:#AAC893;background:var(--surface);border-color:var(--line)}
+[data-theme=dark] .feeling.answered{background:#253923;border-color:#718A5D}
+[data-theme=dark] :is(.feeling-value,.feeling-caption){color:#D3E5BF}
+[data-theme=dark] .feeling-heading label{color:var(--ink)}
+[data-theme=dark] :is(.feeling-value small,.feeling-ticks,.feeling-footer>span,.feeling:not(.answered) .feeling-caption){color:var(--muted)}
+[data-theme=dark] .feeling-range::-webkit-slider-runnable-track{background:linear-gradient(to right,var(--slider-color) 0,var(--slider-color) var(--fill),var(--line-strong) var(--fill),var(--line-strong) 100%)}
+[data-theme=dark] .feeling-range::-moz-range-track{background:linear-gradient(to right,var(--slider-color) 0,var(--slider-color) var(--fill),var(--line-strong) var(--fill),var(--line-strong) 100%)}
+[data-theme=dark] .feeling-range::-webkit-slider-thumb{background:var(--paper);border-color:var(--accent);box-shadow:0 1px 4px #0005}
+[data-theme=dark] .answered .feeling-range::-webkit-slider-thumb{background:var(--accent);border-color:var(--paper)}
+[data-theme=dark] .feeling-range::-moz-range-thumb{background:var(--paper);border-color:var(--accent);box-shadow:0 1px 4px #0005}
+[data-theme=dark] .answered .feeling-range::-moz-range-thumb{background:var(--accent);border-color:var(--paper)}
+/* Insights, progress bars, and the SVG plots share one visible legend palette. */
+[data-theme=dark] :is(.insight-accomplished,.insight-trend,.insight-detail){background:#2A3C26}
+[data-theme=dark] :is(.insight-personal,.insight-goals-intro,.insight-checkin){background:var(--warm-paper);color:var(--warm-ink);border-color:var(--warm-line)}
+[data-theme=dark] .insight-analysis{background:var(--warm-paper);border-color:var(--warm-line)}
+[data-theme=dark] .insight-botanical{color:#8AA66E}
+[data-theme=dark] :is(.insight-personal,.insight-goals-intro) .insight-botanical{color:#C2A773}
+[data-theme=dark] :is(.insight-metrics strong,.stats-pair .metric){color:#D7E8C5}
+[data-theme=dark] :is(.insight-metrics span,.insights-view .insight-footnote,.insight-chart-ends,.insight-rating-values,.insight-trend-summary span,.insight-goal-period,.insight-goal-value>span,.stats-pair .eyebrow,.barlabels,.chart-caption){color:var(--muted)}
+[data-theme=dark] :is(.insight-trend-summary,.insight-detail dl>div){border-color:#647853}
+[data-theme=dark] :is(.insight-goal-track,.activity-track){background:var(--track)}
+[data-theme=dark] :is(.insight-goal-track>span,.activity-track span){background:var(--chart)}
+[data-theme=dark] .bars{border-color:var(--line);background:repeating-linear-gradient(to top,transparent 0,transparent 49px,var(--line) 49px,var(--line) 50px)}
+[data-theme=dark] .bar{background:#779566}
+[data-theme=dark] .bar:last-child{background:var(--chart-strong)}
+[data-theme=dark] .bar.missing{background:#829378}
+[data-theme=dark] .summary-label svg{color:var(--accent)}
+[data-theme=dark] .insight-activity svg path{stroke:var(--line-strong)}
+[data-theme=dark] .insight-activity svg rect{fill:var(--chart)}
+[data-theme=dark] .insight-activity svg rect:last-child{fill:var(--chart-strong)}
+[data-theme=dark] .insight-trend-svg text{fill:var(--muted)}
+[data-theme=dark] .insight-trend-svg path[stroke-dasharray]{stroke:var(--line-strong)}
+[data-theme=dark] .insight-trend-svg path:not([stroke-dasharray]){stroke:var(--chart-strong)}
+[data-theme=dark] .insight-trend-svg circle{fill:var(--chart-strong)}
+/* Anatomy: scene, fallback shading, list, dialog, and legend stay in agreement. */
+[data-theme=dark] .anatomy-card{--anatomy-ink:var(--ink);--anatomy-muted:var(--muted);--anatomy-line:var(--line);background:var(--surface-soft);border-color:var(--line)}
+[data-theme=dark] .anatomy-stage{background:radial-gradient(ellipse at 50% 45%,#31422B 0%,#1E2D22 60%,var(--surface-soft) 78%)}
+[data-theme=dark] .anatomy-stage:after{background:#A7BD96}
+[data-theme=dark] .anatomy-topline i{background:var(--accent)}
+[data-theme=dark] :is(.anatomy-view-control,.anatomy-metric-switch){background:var(--surface-raised);box-shadow:0 1px 2px #0003}
+[data-theme=dark] .anatomy-card :is(.anatomy-view-control button,.anatomy-metric-switch button){background:transparent;color:var(--muted)}
+[data-theme=dark] .anatomy-card :is(.anatomy-view-control button,.anatomy-metric-switch button)[aria-pressed=true]{background:#3A5031;color:#E1EED1;box-shadow:0 1px 4px #0004}
+[data-theme=dark] :is(.anatomy-stage-label,.anatomy-stage-label small,.anatomy-legend,.anatomy-goal-prompt p,.anatomy-data-note,.anatomy-list-heading>span,.anatomy-group-copy small,.anatomy-group-state small,.anatomy-detail-metrics span,.anatomy-detail-state small,.anatomy-contributors li>span,.anatomy-contributors li>small,.anatomy-contributors p,.anatomy-detail-note,.anatomy-help-copy){color:var(--muted)}
+[data-theme=dark] .anatomy-goal-prompt{background:var(--surface);border-color:var(--line)}
+[data-theme=dark] :is(.anatomy-card .anatomy-target-button,.anatomy-dialog .anatomy-target-button,.anatomy-card .anatomy-missing button,.anatomy-dialog .anatomy-edit-role){background:var(--surface-raised);color:var(--accent);border-color:var(--line-strong)}
+[data-theme=dark] .anatomy-card .anatomy-group-button{color:var(--ink);border-color:var(--line)}
+[data-theme=dark] .anatomy-group-copy strong{color:var(--ink)}
+[data-theme=dark] .anatomy-group-button>span:last-child{color:#A2B497}
+[data-theme=dark] .anatomy-dot{border-color:#17231C66}
+[data-theme=dark] .anatomy-dot.is-unknown{background:repeating-linear-gradient(135deg,var(--anatomy-unknown) 0 2px,#344638 2px 3px)}
+[data-theme=dark] .anatomy-dialog .anatomy-close{background:var(--surface-raised);color:var(--accent);border-color:var(--line-strong)}
+[data-theme=dark] .anatomy-detail-metrics{background:var(--surface-raised);border-color:var(--line)}
+[data-theme=dark] :is(.anatomy-contributors li,.anatomy-detail-note,.anatomy-missing li){border-color:var(--line)}
+[data-theme=dark] .anatomy-card .anatomy-help{background:var(--surface-raised);color:var(--accent);border-color:var(--line-strong)}
+[data-theme=dark] .anatomy-help-copy a{color:var(--accent)}
+[data-theme=dark] :is(.anatomy-card,.anatomy-dialog) :is(button,summary):focus-visible{outline-color:var(--focus)}
+[data-theme=dark] :is(.exercise-composer .ex-details summary,.feeling input.feeling-range):focus-visible{outline-color:var(--focus)}
+[data-theme=dark] .exercise-composer .ex-field :is(input,select,textarea):focus{border-color:var(--focus)}
+[data-theme=dark] .exercise-composer .ex-field :is(input,select,textarea)[aria-invalid=true]{border-color:var(--error-line)}
+[data-theme=dark] .context-row .eyebrow{color:var(--muted)}
+/* Do not replace operating-system high-contrast colors with the night palette. */
+@media(forced-colors:active){
+  [data-theme=dark] :is(.shell,.card,.anatomy-card,.help-dialog,.appearance-dialog,.anatomy-dialog){background:Canvas;color:CanvasText;border-color:CanvasText}
+  [data-theme=dark] :is(button,input,select,textarea){forced-color-adjust:auto}
+}

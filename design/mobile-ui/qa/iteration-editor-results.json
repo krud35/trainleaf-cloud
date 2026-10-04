@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "Catalog doses empty; RIR zero independent of kg; RIR/tempo/rest help Enter or touch, Escape and focus restore",
+    "Three-member superseries: native selection, order and focus, detach, append, ungroup, rounds become sets, independent transition/round rest",
+    "iteration-editor-360: 360 px, long names and controls fit",
+    "iteration-editor-200: 360 px, long names and controls fit",
+    "Exercise modality controls tempo; cycling has no running pace; saved plan and group data survive reload",
+    "iteration-survey-360: 360 px, long names and controls fit",
+    "iteration-survey-200: 360 px, long names and controls fit",
+    "Completion keeps plan snapshot; survey middle stays unanswered; zero persists, per-question skip becomes null, satisfaction/RPE/day wellness remain separate after reload",
+    "Unplanned activity also opens survey; skipping untouched questionnaire saves three null values, never midpoint5",
+    "Historical kg remain visible and unchanged while editing independent RIR; original history untouched before save",
+    "No browser exceptions"
+  ],
+  "errors": []
+}

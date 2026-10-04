@@ -1,0 +1,118 @@
+/* Preference controls remain independent of the training profile and database. */
+.theme-control { border: 0; padding: 0; margin: 0; min-width: 0; color: var(--ink); }
+.theme-control > legend { padding: 0; margin-bottom: 12px; font-size: 1.14rem; font-weight: 650; }
+.theme-options { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,7rem),1fr)); gap: 8px; }
+.theme-choice { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 7px; min-height: 48px; padding: 10px; border: 1px solid var(--line); border-radius: 5px 15px 5px 5px; font-size: .82rem; cursor: pointer; }
+.theme-choice input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.theme-choice:has(input:checked) { background: var(--sage); border-color: var(--accent); }
+.theme-choice:focus-within { outline: 3px solid #58754A; outline-offset: 3px; }
+.theme-control > p { margin-top: 10px; color: var(--muted); font-size: .78rem; }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; color: #E2EBDD; background: #101B14; --ink: #E2EBDD; --muted: #ABBCA6; --line: #40533E; --paper: #17251C; --accent: #A1C88F; --navy: #3D694D; --sage: #2C402A; --sand: #463C26; --leaf: #779966; --surface: #203125; --surface-hover: #293D2B; --field-paper: #1A2B20; --warm-ink: #E9D2A4; --warm-line: #8F8054; }
+:root[data-theme="dark"] body { color: var(--ink); background: #101B14; }
+:root[data-theme="dark"] :is(.app-shell,.app-header) { background: var(--paper); }
+:root[data-theme="dark"] .mobile-nav { background: #17251CF5; border-color: var(--line); }
+:root[data-theme="dark"] :is(.brand,.brand > svg,.month-stamp,.text-button,a) { color: var(--accent); }
+:root[data-theme="dark"] :is(.app-settings,.progress-view,.wellbeing-view,.ed-detail,.muscle-map,.session-card-title,.more-tool-copy strong,.today-event-row,.muscle-list-button,.pv-work-facts strong,.wv-values,.wv-editing-label) { color: var(--ink); }
+:root[data-theme="dark"] .mobile-nav button[aria-current=page] { color: #D5E8C7; }
+:root[data-theme="dark"] .mobile-nav button[aria-current=page] .nav-icon { background: var(--sage); }
+:root[data-theme="dark"] :is(.card,.workout-card,.empty-state,.shortcut-card,.overview > div,.confirm-box,.planning-dialog,.planning-help,.planning-season-month,.week-day-select,.planning-month-day-select,.wv-record,.more-all,.library-confirm,.we-picker,.muscle-detail-metrics > div) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme="dark"] :is(.secondary,.icon-button,.wellness-view button,.workout-editor button,.wv-range button,.pv-tabs button,.wbt-range button,.wbt-slots button,.history-more) { color: var(--ink); background: transparent; border-color: var(--line); }
+:root[data-theme="dark"] :is(.primary,.wellness-view button.primary,.workout-editor button.primary,.wellness-view .wv-range button[aria-pressed="true"]) { color: #F2F8EE; background: #3D694D; border-color: #6C9877; }
+:root[data-theme="dark"] .leaf-card-checkin .checkin-action { color: #F2F8EE; background: #3D694D; }
+:root[data-theme="dark"] :is(.choice.selected,.module-choice:has(input:checked),.pv-tabs button[aria-pressed="true"],.wbt-range button[aria-pressed="true"],.wbt-slots button[aria-pressed="true"],.planning-view-switch button[aria-pressed="true"],.planning-period-strip button[aria-pressed="true"],.muscle-mode-switch button[aria-pressed="true"],.muscle-side-switch button[aria-pressed="true"],.planning-month-day-select[aria-pressed="true"],.week-day-select.selected) { background: var(--sage); color: var(--ink); border-color: var(--accent); }
+:root[data-theme="dark"] :is(.module-picker .module-choice:has(input:checked),.settings-view .form-section,.settings-privacy) { background: transparent; }
+:root[data-theme="dark"] :is(.field,.range-description,.wv-question-text,.wv-scale-hint,.wv-unsaved,.muscle-list-copy > span,.muscle-detail-metrics dt,.planning-empty,.planning-breadcrumb,.planning-day-readiness,.planning-month-weekday,.planning-season-month small,.planning-season-periods small,.more-tool-copy small,.more-chevron,.more-empty,.more-all > summary,.more-all > summary > span,.checkin-done small,.session-metadata,.session-sport,.session-card .session-status,.session-card-link,.session-note,.wv-values,.pv-period,.pv-comparison,.pv-completeness,.pv-work-facts span:last-child,.wbt-period,.wbt-comparison,.wbt-completeness,.wbt-scale,.wbt-chart-ends,.wbt-summary span,.pv-filters summary,.wbt-metric summary,.ed-facts dt,.ed-section > h3,.ed-period-context p,.pv-activity-values > summary,.pv-rating-values,.today-event-copy small) { color: var(--muted); }
+:root[data-theme="dark"] :is(.field input,.field select,.field textarea,.settings-view .form-section:first-child input) { color: var(--ink); background: var(--field-paper); border-color: #60745B; }
+:root[data-theme="dark"] :is(.field input[readonly],.field textarea[readonly]) { background: var(--surface); }
+:root[data-theme="dark"] :is(.field input,.field textarea)::placeholder { color: var(--muted); }
+:root[data-theme="dark"] :is(.planning-dialog,.wv-dialog > .card,.we-confirm > .card) { color: var(--ink); }
+:root[data-theme="dark"] :is(.more-leaf-symbol,.more-tool-row:nth-child(2) .more-leaf-symbol,.more-tool-row:nth-child(3) .more-leaf-symbol,.checkin-check,.planning-event-card,.planning-season-periods button,.week-mini-event,.ed-expectations,.ed-after,.ed-wellness-facts,.progress-view .pv-work,.wbt-trend-paper,.wbt-trend-surface) { color: var(--ink); background: var(--sage); border-color: var(--line); }
+:root[data-theme="dark"] .today-view .checkin-done { color: var(--ink); background: transparent; }
+:root[data-theme="dark"] .today-view .today-add { background: var(--surface); border-color: #60745B; }
+:root[data-theme="dark"] .today-view .empty-state { background: var(--surface); border-color: #60745B; }
+:root[data-theme="dark"] :is(.ed-notebook,.ed-analysis,.wv-existing,.library-confirm,.planned-expectations) { background: var(--sand); color: var(--warm-ink); border-color: var(--warm-line); }
+:root[data-theme="dark"] :is(.ed-notebook p,.ed-notebook h2,.ed-analysis summary) { color: var(--warm-ink); }
+:root[data-theme="dark"] :is(.danger,.wv-danger,.workout-editor .we-danger) { color: #F4ACA0; border-color: #A16358; }
+:root[data-theme="dark"] .error { background: #4A2A25; border-color: #AA6D5E; color: #FFD0C1; }
+:root[data-theme="dark"] .error button { background: #37251F; color: #FFD0C1; border-color: #AA6D5E; }
+:root[data-theme="dark"] .success { background: #29432F; border-color: #638967; color: #D8EDD2; }
+:root[data-theme="dark"] .leaf-card { --blade: #31472A; --leaf-ink: #A4BF88; --leaf-wash: #789A58; color: #DDEBCF; }
+:root[data-theme="dark"] .leaf-card-checkin { --blade: #2F4429; --leaf-ink: #A4BF88; --leaf-wash: #789A58; color: #DDEBCF; }
+:root[data-theme="dark"] .leaf-card-goal { --blade: #493D26; --leaf-ink: #D0B478; --leaf-wash: #9C8048; color: #F0D6A7; }
+:root[data-theme="dark"] :is(.leaf-card-copy p,.leaf-card-copy small,.leaf-card-copy h2,.leaf-card-copy .eyebrow) { color: inherit; }
+/* Six distinct session hues retain their meaning without changing training data. */
+:root[data-theme="dark"] :is(.training-type-surface,.training-type-badge) { --training-bg: #293D2F !important; --training-ink: #CDDDC7 !important; }
+:root[data-theme="dark"] [style*="#F1DFD2" i] { --training-bg: #49372D !important; --training-ink: #E8C0A7 !important; }
+:root[data-theme="dark"] [style*="#DDEBD9" i] { --training-bg: #29432F !important; --training-ink: #BEDDB7 !important; }
+:root[data-theme="dark"] [style*="#DCEBF0" i] { --training-bg: #293E46 !important; --training-ink: #B5D7E1 !important; }
+:root[data-theme="dark"] [style*="#F1E8CB" i] { --training-bg: #493F26 !important; --training-ink: #E4D5A3 !important; }
+:root[data-theme="dark"] [style*="#E8E2F1" i] { --training-bg: #3B334A !important; --training-ink: #D1BFE8 !important; }
+:root[data-theme="dark"] [style*="#F0DFE9" i] { --training-bg: #493242 !important; --training-ink: #E5BFD7 !important; }
+:root[data-theme="dark"] :is(.session-list .session-card,.ed-session,.planning-day-session,.week-mini-session) { background: var(--training-bg); border-color: var(--training-ink); }
+:root[data-theme="dark"] .session-card .training-type-badge { background: transparent; }
+:root[data-theme="dark"] :is(.pv-big-number > strong,.pv-work-facts strong,.wbt-metric .pv-section-heading > strong,.pv-summary,.wbt-chart) { color: #C8DDB8; }
+:root[data-theme="dark"] :is(.bar-track,.pv-bar-track,.forecast-track) { background: #354931; border-color: var(--line); }
+:root[data-theme="dark"] :is(.bar-fill,.pv-bar-track > div,.forecast-track > span) { background: #93B47B; }
+:root[data-theme="dark"] .wellness-bar { background: #CFAD77; }
+:root[data-theme="dark"] .forecast-incomplete .forecast-track { background: repeating-linear-gradient(135deg,#26362B 0 3px,#61715A 3px 5px); }
+:root[data-theme="dark"] .forecast-incomplete .forecast-track > span { background: repeating-linear-gradient(135deg,#819873 0 3px,#405139 3px 5px); }
+:root[data-theme="dark"] .muscle-stage { background: radial-gradient(ellipse at center,#283B29,var(--paper) 75%); }
+:root[data-theme="dark"] :is(.pv-work-facts,.pv-calculations,.pv-goal-fields,.wbt-summary,.wbt-metric,.wv-question,.wv-history,.wv-record-notes,.ed-session-facts,.ed-period-context,.ed-facts > div,.ed-exercises li,.today-event-row,.muscle-list li,.planning-day-details,.planning-readiness-slot) { border-color: var(--line); }
+:root[data-theme="dark"] :is(.pv-activity-chart,.wbt-chart) text { fill: var(--muted); }
+:root[data-theme="dark"] :is(.pv-activity-chart,.wbt-chart) line { stroke: var(--line); }
+:root[data-theme="dark"] .pv-activity-chart rect { fill: #95B67F; }
+:root[data-theme="dark"] .pv-activity-chart circle { fill: #D9BE87; }
+:root[data-theme="dark"] .pv-botanical { color: #769A60; }
+:root[data-theme="dark"] :is(.range-field input[type=range],input[type=checkbox],input[type=radio],progress) { accent-color: #A1C88F; }
+:root[data-theme="dark"] :is(button,a,input,select,textarea):focus-visible { outline-color: #BDD99F; }
+:root[data-theme="dark"] .leaf-card:focus-visible .leaf-card-blade { stroke: #BDD99F; }
+:root[data-theme="dark"] .theme-choice:focus-within { outline-color: #BDD99F; }
+@media(hover:hover) { :root[data-theme="dark"] :is(.secondary,.icon-button,.more-hub .more-tool-row,.muscle-list-button,.shortcut-card,.library-list-card):hover:not(:disabled) { background: var(--surface-hover); } :root[data-theme="dark"] .primary:hover:not(:disabled) { background: #4B795A; } }
+/* A system-dark blank startup paints the right canvas before JavaScript starts. */
+@media(prefers-color-scheme:dark) { :root:not([data-theme]) { color-scheme: dark; color: #E2EBDD; background: #101B14; } }
+:root[data-theme="dark"] :is(.wbt-metric,.pv-goal-card) { background: var(--sage); color: var(--ink); border-color: var(--line); }
+:root[data-theme="dark"] :is(.pv-calculations,.we-conflict) { background: var(--sand); color: var(--warm-ink); border-color: var(--warm-line); }
+:root[data-theme="dark"] :is(.pv-insight-link,.pv-rating,.pv-rating-values b) { color: var(--ink); border-color: var(--line); }
+:root[data-theme="dark"] :is(.pv-insight-link small,.pv-rating > small,.wbt-intro) { color: var(--muted); }
+:root[data-theme="dark"] .pv-goal-card progress::-webkit-progress-bar { background: #354931; }
+:root[data-theme="dark"] .pv-goal-card progress::-webkit-progress-value { background: #93B47B; }
+:root[data-theme="dark"] .wbt-chart line { stroke: currentColor; }
+:root[data-theme="dark"] .more-hub .more-tool-row:hover { background: var(--surface-hover); }
+:root[data-theme="dark"] .theme-options .theme-choice:has(input:checked) { color: var(--ink); }
+:root[data-theme="dark"] :is(.pv-goals-intro,.pv-goal-card) { background: var(--sand); color: var(--warm-ink); border-color: var(--warm-line); }
+:root[data-theme="dark"] .library-danger { color: #F4ACA0; border-color: #A16358; }
+:root[data-theme="dark"] .planning-event-marker { background: #A6BB90; }
+/* Calendar styles are deliberately scoped after every iteration-3 mode. */
+:root[data-theme="dark"] .planning-page { color: var(--ink); }
+:root[data-theme="dark"] :is(.planning-heading h1,.planning-periods h2,.planning-context-heading,.planning-season-title h2,.week-navigation h2,.planning-calendar-navigation h2,.planning-day-details h3,.forecast-heading h2,.planning-session-heading strong) { color: var(--ink); }
+:root[data-theme="dark"] :is(.planning-breadcrumb,.planning-breadcrumb .text-button,.planning-breadcrumb button:last-child,.planning-season-year,.planning-season-title p,.planning-timeline-months button,.planning-month-weekday,.planning-period-strip > span,.planning-empty,.planning-season-month small,.planning-season-periods small,.calendar-empty,.planning-day-session small,.planning-session-heading > span,.forecast-heading p,.forecast-note,.forecast-help,.planning-help) { color: var(--muted); }
+:root[data-theme="dark"] .planning-view-switch { background: var(--surface); border-color: var(--line); }
+:root[data-theme="dark"] .planning-view-switch button { background: transparent; color: var(--muted); }
+:root[data-theme="dark"] .planning-view-switch button[aria-pressed="true"] { background: #3D694D; color: #F2F8EE; border: 0; }
+:root[data-theme="dark"] .planning-view-switch button:hover:not(:disabled) { background: var(--surface-hover); color: var(--ink); }
+:root[data-theme="dark"] .planning-view-switch button[aria-pressed="true"]:hover { background: #4B795A; color: #F2F8EE; }
+:root[data-theme="dark"] :is(.planning-filters > summary,.planning-calendar-list > summary,.planning-periods > details > summary,.forecast-facts dt,.forecast-facts dd,.reference-days,.reference-rest) { color: var(--ink); }
+:root[data-theme="dark"] :is(.planning-filters,.planning-calendar-list,.planning-period-strip,.planning-season-periods button,.planning-timeline-months,.planning-calendar-scroll,.week-day > .planning-day-readiness) { border-color: var(--line); }
+:root[data-theme="dark"] .planning-filters :is(.field input,.field select) { background: var(--field-paper); color: var(--ink); border-color: #60745B; }
+:root[data-theme="dark"] :is(.planning-create button,.planning-season-choices button,.planning-season-weeks button,.planning-season-month,.week-navigation > .secondary,.planning-calendar-navigation > .secondary) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme="dark"] .planning-create button.primary { background: #3D694D; color: #F2F8EE; border-color: #6C9877; }
+:root[data-theme="dark"] :is(.planning-season-choices button[aria-pressed="true"],.planning-month-day.selected,.week-day.selected) { background: var(--sage); border-color: #7C9B68; color: var(--ink); box-shadow: inset 0 0 0 1px #7C9B68; }
+:root[data-theme="dark"] :is(.week-day,.planning-month-day) { background: var(--surface); }
+:root[data-theme="dark"] .planning-month-day.outside-month { background: #1C2A20; color: var(--muted); }
+:root[data-theme="dark"] :is(.week-day-select,.planning-month-day-select,.planning-month-day-select[aria-pressed="true"]) { background: transparent; color: var(--ink); }
+:root[data-theme="dark"] :is(.week-day-select strong,.planning-month-date) { color: var(--ink); }
+:root[data-theme="dark"] .week-day-select > i { background: var(--accent); }
+:root[data-theme="dark"] .planning-month-day-select[aria-current="date"] { background: #3D694D; color: #F2F8EE; }
+:root[data-theme="dark"] .planning-day-session { color: var(--ink); }
+:root[data-theme="dark"] :is(.planning-event-card,.week-mini-event,.planning-timeline-event,.planning-event-detail .card) { background: var(--sand); color: var(--warm-ink); border-color: var(--warm-line); }
+:root[data-theme="dark"] :is(.calendar-event-multi,.planning-timeline-event.calendar-event-multi) { background: repeating-linear-gradient(135deg,#3C3325 0,#3C3325 6px,#51432F 6px,#51432F 12px); border-color: var(--warm-line); color: var(--warm-ink); }
+:root[data-theme="dark"] .planning-timeline-canvas { border-color: var(--line); background: repeating-linear-gradient(to right,transparent 0,transparent calc(100% / var(--timeline-columns) - 1px),#40533E calc(100% / var(--timeline-columns) - 1px),#40533E calc(100% / var(--timeline-columns))); }
+:root[data-theme="dark"] .planning-timeline-bar { background: var(--sage); color: var(--ink); border-color: #7C9B68; }
+:root[data-theme="dark"] .planning-timeline-bar > small { color: var(--muted); }
+:root[data-theme="dark"] .planning-timeline-row.is-season .planning-timeline-bar { background: #3D694D; color: #F2F8EE; border-color: #6C9877; }
+:root[data-theme="dark"] .planning-timeline-row.is-season .planning-timeline-bar > small { color: #D9E8D2; }
+:root[data-theme="dark"] :is(.planning-season-choices,.planning-season-weeks,.planning-timeline,.planning-calendar-scroll) { scrollbar-color: #779966 var(--paper); }
+:root[data-theme="dark"] .planning-projection { background: var(--surface); border-color: var(--line); }
+:root[data-theme="dark"] .forecast-no-reference .forecast-track { background: #354931; }
+:root[data-theme="dark"] :is(.planning-page,.planning-dialog,.week-overview) :focus-visible { outline-color: #BDD99F; }

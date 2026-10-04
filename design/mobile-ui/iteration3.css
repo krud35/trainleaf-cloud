@@ -1,0 +1,37 @@
+/* Trainleaf iteration 3: one compact frame, distinct section surfaces. */
+:root{--paper:#F7F8F2;--ink:#203B2C;--sage:#DCE8CC;--sand:#F0E1BE;--section-gap:30px}
+.review{padding:8px 16px;min-height:44px;gap:10px}
+.shell{margin-top:10px}
+.app-header{padding-top:max(14px,env(safe-area-inset-top));padding-bottom:15px;min-height:64px}
+.wordmark{gap:9px}.wordmark svg{width:29px;height:29px}.wordmark>span{font-size:1.45rem}.wordmark small{font-size:.62rem}
+.page-heading{margin:22px 0 24px}.page-heading h1,.journal-heading h1{font-size:2.4rem;line-height:1.08}
+.journal-heading{margin-top:20px;margin-bottom:12px}.journal-heading p{font-size:.78rem}
+.section-heading{margin-top:24px;gap:12px}.section-heading h2{font-size:1.14rem}
+.session-card{background:var(--session-paper,#FDFEF9);border-color:color-mix(in srgb,var(--session-ink,#71915E) 28%,transparent);border-left-color:var(--session-ink,#71915E);box-shadow:none}
+.session-card:hover{filter:brightness(.98);background:var(--session-paper,#EDF2E8)}
+.session-card-sport{font-size:.72rem}.session-card-note{display:none}.session-card>strong{margin:10px 0 6px}
+.session-card-link{margin-top:7px}.session-card-meta{color:#394C3C}
+.today-context{border-top:1px solid var(--line);margin-top:28px;padding-top:10px}
+.today-context .context-feature{margin-top:8px}.context-crumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0 18px;color:#566B51;font-size:.76rem}
+.context-crumb button{border:0;background:transparent;padding:8px 0;min-height:44px;font-size:.76rem}.context-crumb>span:before{content:'›';padding:0 12px 0 5px}
+.session-detail-hero{background:var(--session-paper);color:var(--session-ink);padding:23px 20px 27px;border-radius:4px 35px 4px 4px;border-bottom:2px solid color-mix(in srgb,var(--session-ink) 30%,transparent)}
+.session-detail-hero h1{font:400 2rem/1.08 var(--serif);letter-spacing:-.025em;margin:13px 0 20px;overflow-wrap:anywhere}
+.session-detail-hero p{font-size:.78rem;margin:13px 0}.session-detail-hero small{display:block;margin-top:7px;font-size:.75rem}.session-status{font-size:.75rem;font-weight:600}
+.session-detail-actions{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.session-detail-actions button{font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:8px}.session-detail-actions svg{width:18px;height:18px}
+.session-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;padding:18px 0;border-block:1px solid var(--line)}
+.session-facts dt{display:flex;align-items:center;flex-wrap:wrap;font-size:.72rem;color:#52654B}.session-facts dd{margin:10px 0;font:400 2rem var(--serif)}.session-facts dd small{font:400 .75rem var(--sans)}
+.session-notebook{padding:18px 20px;background:#F1E8D2;border-left:2px solid #B7A570;transform:rotate(-.35deg);margin:25px 0}.session-notebook p{font-size:.89rem;line-height:1.65;margin:10px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.session-exercises{margin-top:30px}.session-exercise-section{margin:22px 0}.session-exercise-section h3{font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:#55704B}.session-exercise-section ol{margin:0;padding-left:24px}.session-exercise-section li{padding:14px 0 14px 7px;border-bottom:1px solid var(--line);font-size:.9rem}.session-exercise-section li::marker{font-family:var(--serif);color:#708866}.session-exercise-section strong{font-weight:550;overflow-wrap:anywhere}.session-exercise-section p{font-size:.8rem;margin:8px 0 0}.session-exercise-section small{font-size:.73rem;color:#53674D}.session-exercise-section .tag{display:block;width:fit-content;margin-top:8px}
+.session-after{background:#EBF0E0;padding:20px;margin:30px 0;border-radius:24px 4px 4px 4px}.session-after h2{margin-top:0}.session-after p{font-size:.82rem;white-space:pre-wrap}.session-load{margin-bottom:0}.session-load summary{font-size:.8rem}.session-load .label-help{font-size:.85rem;margin-top:0}
+.session-period-context{padding:15px 0;border-top:1px solid var(--line)}.session-period-context h2{font-size:.95rem}.session-period-context span{display:block;font-size:.79rem;color:#52684B;margin:7px 0}
+.event-form-intro,.goal-form-intro{font-size:.84rem;color:#52634C;line-height:1.6}.field-hint{font-size:.74rem;color:#53684B;margin:-12px 0 14px}
+.more-hub .more-shortcut{grid-template-columns:40px minmax(0,1fr) 15px;padding:19px 0}.more-hub .more-symbol{width:36px;height:40px;border-radius:25px 4px 25px 4px}.more-hub .more-shortcut strong{font-weight:500}.more-hub .more-shortcut small{font-size:.75rem}
+.more-hub .more-shortcut:nth-child(2) .more-symbol{background:#E6EDD4}.more-hub .more-shortcut:nth-child(3) .more-symbol{background:#EEE5C9}
+.large .session-facts{grid-template-columns:1fr}.large .session-detail-hero{padding:18px}.large .session-detail-hero h1{font-size:1.65rem}.large .session-detail-actions button{width:100%}
+@media(max-width:600px){.shell{margin-top:0}.review{padding:5px 16px}.review-heading>span{font-size:10px}.app-header{padding-top:max(12px,env(safe-area-inset-top))}.review-heading b{font-size:10px}.review summary{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.help-sources{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:15px;margin-top:15px;font-size:.76rem}.help-sources a{min-height:44px;display:flex;align-items:center;overflow-wrap:anywhere}
+.plan-checkin-context{font-size:.8rem;margin:22px 0}.plan-checkin-context summary{font-size:.77rem}.plan-checkin-context .subtle{font-size:.8rem}
+.wellness-entry{width:100%;text-align:left}.planned-expectations{background:#EFF3E8;padding:10px 16px;border-radius:4px 20px 4px 4px}.planned-expectations summary{font-size:.84rem}
+.history-completeness{margin:28px 0;padding:22px 18px;background:#EDF2E4;border-radius:4px 26px 4px 4px}.history-completeness h2{margin-top:0;font-family:var(--serif);font-size:1.3rem}.history-completeness p{font-size:.84rem;line-height:1.6}.history-completeness .form-aside{font-size:.76rem}.history-completeness .choice{align-items:flex-start}.history-completeness input[type=date]{min-width:0;max-width:100%}
+.reference-days{font-size:.8rem}.reference-days>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:8px 0}.reference-days dd{margin:0}
