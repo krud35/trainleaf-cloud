@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39; &#39;wasm-unsafe-eval&#39; &#39;sha256-6lA2aappdgGTJFZGeglNjaxKXq0EQyhffoQwr+Qzsco=&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: blob:; font-src &#39;self&#39;; connect-src &#39;self&#39; https://coach.trainleaf-app.workers.dev; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;; frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://drive.google.com">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F7F8F2" />
+    <script id="trainleaf-appearance-bootstrap">
+      // Apply the saved appearance and language before CSS, application code or the database loads.
+      // The same preference keys as the app: one browser, one choice.
+      (() => {
+        let preference = 'system';
+        try { preference = localStorage.getItem('trainleaf-theme') || 'system'; } catch { /* Keep the system preference when storage is unavailable. */ }
+        const dark = preference === 'dark' || preference !== 'light' && !!window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#17251C' : '#F7F8F2';
+        let language = 'en';
+        try { const saved = localStorage.getItem('trainleaf-language'); if (saved === 'pl' || saved === 'fr' || saved === 'es') language = saved; } catch { /* Keep English when storage is unavailable. */ }
+        document.documentElement.lang = language;
+      })();
+    </script>
+    <style>html { background: #F7F8F2; color: #203B2C; } html[data-theme="dark"] { background: #17251C; color: #E2EBDD; }</style>
+    <meta name="description" content="Your training journal. Plan, record and review your training." />
+    <link rel="icon" type="image/png" sizes="32x32" href="/trainleaf-cloud/assets/favicon-32-BTVV4kqH.png" />
+    <link rel="icon" type="image/svg+xml" href="/trainleaf-cloud/assets/favicon-BNgg9rYx.svg" />
+    <link rel="apple-touch-icon" href="/trainleaf-cloud/assets/apple-touch-icon-DyQeBIiV.png" />
+    <title>Trainleaf</title>
+    <script type="module" crossorigin src="/trainleaf-cloud/assets/index-BtvNF7fx.js"></script>
+    <link rel="stylesheet" crossorigin href="/trainleaf-cloud/assets/index-CjBnuzkb.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
