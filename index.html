@@ -1,34 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39; &#39;wasm-unsafe-eval&#39; &#39;sha256-6lA2aappdgGTJFZGeglNjaxKXq0EQyhffoQwr+Qzsco=&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: blob:; font-src &#39;self&#39;; connect-src &#39;self&#39; https://coach.trainleaf-app.workers.dev; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;; frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://drive.google.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39; &#39;wasm-unsafe-eval&#39; &#39;sha256-/nQIQOXS36LimPSsVdIpxek0VMP+ABXMF2QWTyZKR5o=&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: blob:; font-src &#39;self&#39;; connect-src &#39;self&#39; https://api.3to5performance.com; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;; frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://drive.google.com">
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#F7F8F2" />
-    <script id="trainleaf-appearance-bootstrap">
+    <meta name="theme-color" content="#F7FAFD" />
+    <script id="t35-appearance-bootstrap">
       // Apply the saved appearance and language before CSS, application code or the database loads.
       // The same preference keys as the app: one browser, one choice.
       (() => {
         let preference = 'system';
-        try { preference = localStorage.getItem('trainleaf-theme') || 'system'; } catch { /* Keep the system preference when storage is unavailable. */ }
+        try { preference = localStorage.getItem('3to5-theme') || localStorage.getItem('trainleaf-theme') || 'system'; } catch { /* Keep the system preference when storage is unavailable. */ }
         const dark = preference === 'dark' || preference !== 'light' && !!window.matchMedia?.('(prefers-color-scheme: dark)').matches;
         document.documentElement.dataset.theme = dark ? 'dark' : 'light';
         document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
-        document.querySelector('meta[name="theme-color"]').content = dark ? '#17251C' : '#F7F8F2';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#0E161F' : '#F7FAFD';
         let language = 'en';
-        try { const saved = localStorage.getItem('trainleaf-language'); if (saved === 'pl' || saved === 'fr' || saved === 'es') language = saved; } catch { /* Keep English when storage is unavailable. */ }
+        try { const saved = localStorage.getItem('3to5-language') || localStorage.getItem('trainleaf-language'); if (saved === 'pl' || saved === 'fr' || saved === 'es') language = saved; } catch { /* Keep English when storage is unavailable. */ }
         document.documentElement.lang = language;
       })();
     </script>
-    <style>html { background: #F7F8F2; color: #203B2C; } html[data-theme="dark"] { background: #17251C; color: #E2EBDD; }</style>
+    <style>html { background: #F7FAFD; color: #122132; } html[data-theme="dark"] { background: #0E161F; color: #E1EAF4; }</style>
     <meta name="description" content="Your training journal. Plan, record and review your training." />
-    <link rel="icon" type="image/png" sizes="32x32" href="/trainleaf-cloud/assets/favicon-32-BTVV4kqH.png" />
-    <link rel="icon" type="image/svg+xml" href="/trainleaf-cloud/assets/favicon-BNgg9rYx.svg" />
-    <link rel="apple-touch-icon" href="/trainleaf-cloud/assets/apple-touch-icon-DyQeBIiV.png" />
-    <title>Trainleaf</title>
-    <script type="module" crossorigin src="/trainleaf-cloud/assets/index-CB0bFYIC.js"></script>
-    <link rel="stylesheet" crossorigin href="/trainleaf-cloud/assets/index-DxHzU4ao.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32-DLkttGqT.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-teYud7s0.svg" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-Du9_o9ee.png" />
+    <title>3to5</title>
+    <script type="module" crossorigin src="/assets/index-BBNVbSaX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DVSFD-qh.css">
   </head>
   <body>
     <div id="root"></div>
